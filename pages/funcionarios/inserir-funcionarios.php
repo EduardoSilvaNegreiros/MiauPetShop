@@ -1,5 +1,5 @@
 <header>
-    <h3>Inserir Funcionários</h3>
+  <h3>Inserir Funcionários</h3>
 </header>
 
 <?php
