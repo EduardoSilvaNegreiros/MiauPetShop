@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"); /* Para a fonte do projeto */
+
+/* ========================
+   Estilos Gerais
+======================== */
+/* Para zerar o CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nerko One", sans-serif;
+}
+
+body {
+  width: 100%; /* Largura total da tela */
+  height: 100vh; /* Altura total da tela */
+  display: flex; /* Flexbox para centralizar */
+  justify-content: center;
+  align-items: center;
+  background: #0c0ce94d; /* Cor de fundo */
+}
+
+/* ========================
+   Container
+======================== */
+
+.container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+}
+
+/* ========================
+   Imagem
+======================== */
+
+.form-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fde3a7d7;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.form-image img {
+  width: 31rem;
+}
+
+/* ========================
+   Formulário
+======================== */
+
+.form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinha verticalmente ao centro */
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.title {
+  text-align: center;
+  position: relative; /* Necessário para o pseudo-elemento ::after */
+}
+
+.title h1::after {
+  content: "";
+  display: block;
+  width: 5rem;
+  height: 0.3rem;
+  background-color: #6c63ff;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -0.5rem;
+}
+
+
+.login-button {
+  margin-top: 2.5rem;
+}
+
+.login-button button {
+  width: 100%;
+  border: none;
+  background-color: #6c63ff;
+  padding: 0.6rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.login-button button:hover {
+  background-color: #6b63ff;
+}
+
+/* ========================
+   Inputs
+======================== */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+}
+
+.input-box input {
+  margin: 0.6rem 0;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0000001c;
+}
+
+.input-box input:hover {
+  background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+  outline: 1px solid #6c63ff;
+}
+
+.input-box label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #000000c0;
+}
+
+.input-box input::placeholder {
+  color: #000000be;
+}
+
+.forgot-password {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.forgot-password a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Estilos da Mensagem de Registro
+======================== */
+.register-message {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.register-message p {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.register-message a {
+  color: #6c63ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-message a:hover {
+  text-decoration: underline;
+}
+
+/* ========================
+   Responsividade
+======================== */
+
+@media screen and (max-width: 1330px) {
+  .form-image {
+    display: none;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1064px) {
+  .container {
+    width: 90%;
+    height: auto;
+  }
+
+  .input-group {
+    flex-direction: column;
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+    max-height: 10rem;
+    padding-right: 5rem;
+  }
+}

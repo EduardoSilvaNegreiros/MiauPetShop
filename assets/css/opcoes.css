@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
+/* ========================
+   Estilos Gerais
+======================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nerko One", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0c0ce94d;
+
+  /* ========================
+   Estilos Para Tabelas
+======================== */
+  table {
+    width: 100%; /* Ocupa toda a largura disponível do contêiner */
+    border-collapse: collapse; /* Remove espaçamento entre células */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente */
+  }
+
+  /* Estilo para células da tabela */
+  th,
+  td {
+    padding: 10px; /* Adiciona espaçamento interno nas células */
+    border: 1px solid #ddd; /* Adiciona uma borda fina e clara */
+    text-align: center; /* Centraliza o texto dentro das células */
+  }
+
+  /* Estilo para o cabeçalho da tabela */
+  th {
+    background-color: #6c63ff; /* Cor de fundo do cabeçalho */
+    color: #fff; /* Cor do texto do cabeçalho */
+  }
+
+  /* Estilo para linhas alternadas */
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Cor de fundo das linhas pares */
+  }
+
+  /* Estilo para a tabela dentro de um contêiner */
+  .table-container {
+    width: 100%; /* Ocupa toda a largura do contêiner pai */
+    display: flex;
+    justify-content: center; /* Centraliza a tabela horizontalmente */
+  }
+
+  /* Adiciona um pouco de margem e espaçamento */
+  .table-container {
+    padding: 1rem; /* Espaçamento ao redor da tabela */
+  }
+}
+
+/* ========================
+   Container
+======================== */
+
+.container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.content {
+  width: 100%; /* Permite que o conteúdo use toda a largura disponível */
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem; /* Reduzi um pouco o tamanho do título */
+  color: #6c63ff;
+  margin: 0; /* Remove margem para centralizar melhor */
+}
+
+/* ========================
+   Header e Navegação
+======================== */
+
+.header {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo no header */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0 1rem; /* Adiciona um pouco de espaçamento nas laterais */
+  position: relative; /* Para posicionamento absoluto do nav */
+}
+
+h1 {
+  flex: 1;
+  text-align: center; /* Garante que o título fique centralizado */
+}
+
+.nav-group {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 8px 16px; /* Reduzido um pouco o padding dos links */
+  border-radius: 5px;
+  font-size: 1rem; /* Tamanho de fonte ajustado */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #5a52d1;
+}
+
+/* ========================
+   Responsividade
+======================== */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-group {
+    position: static;
+    flex-direction: column;
+    width: 100%; /* Links ocupam a largura total no modo responsivo */
+    align-items: center;
+  }
+
+  .nav-link {
+    width: 100%;
+    text-align: center; /* Centraliza o texto dos links */
+    padding: 10px; /* Ajusta o padding para links maiores no modo responsivo */
+  }
+}
