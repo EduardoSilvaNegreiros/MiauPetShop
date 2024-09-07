@@ -1,4 +1,7 @@
 <?php 
+// Explicação para o conteúdo desta pagina
+
+
 // serve para incluir um arquivo dentro de outro quando ele é acessado. A sintaxe para utilizar a função é include 'nome do arquivo.php';
 include("config.php");
 
