@@ -40,6 +40,53 @@ body {
   color: #6c63ff;
 }
 
+/*Estilos para o formulário */
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/*Grupo de inputs*/
+.input-group {
+  display: flex;
+  flex-direction: column; /* Empilha inputs verticalmente dentro de cada grupo */
+  gap: 1rem;
+  flex: 1;
+}
+
+/*Mexendo nos inputs*/
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.1rem;
+  width: 100%;
+}
+
+/* Estilos para os inputs de texto */
+.input-box input {
+  margin: 0.6rem 0;
+  padding: 1rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #0000001c;
+  width: 100%;
+}
+
+.input-box input:hover {
+  /* Efeito hover nos inputs */
+  background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+  /* Estilo quando o input está focado */
+  outline: 1px solid #6c63ff;
+}
+
 /* Links de navegação */
 .nav-group {
   display: flex;
@@ -67,22 +114,12 @@ body {
     padding: 2rem;
   }
 
-  .header {
+  .form {
     flex-direction: column;
-    align-items: center;
+    padding: 2rem;
   }
 
-  .header h1 {
-    margin-bottom: 1rem;
-  }
-
-  .nav-group {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .nav-link {
-    width: 100%;
-    text-align: center;
+  .input-box {
+    width: 100%; /* Ajusta a largura dos inputs para ocupar a tela inteira em dispositivos móveis */
   }
 }
