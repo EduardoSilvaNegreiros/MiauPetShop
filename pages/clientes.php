@@ -17,7 +17,8 @@
     <?php
     // Definindo uma variável chamada sql para poder selecionar todos os campos da tabela no banco de dados e colocar dentro da do nosso site
     $sql = "SELECT * FROM tbclientes";
-    $rs 
+    // Executa a consulta SQL e, em caso de erro, exibe uma mensagem e interrompe a execução. O rs é uma abreviação de "result set" (conjunto de resultados), e muitos desenvolvedores a usam para lembrar que aquela variável armazena os resultados de uma consulta SQL
+    $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta" . mysqli_error($conexao));
     ?>
     <tbody>
         <tr>
