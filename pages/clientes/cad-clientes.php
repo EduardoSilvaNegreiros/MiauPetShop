@@ -1,4 +1,4 @@
-<header>
+<header class="form-header">
     <h3>Cadastro de Contato</h3>
 </header>
 

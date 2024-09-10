@@ -42,21 +42,35 @@ body {
 
 /*Estilos para o formulário */
 .form {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  background-color: #fff;
+  width: 100vw;
+  max-width: 100%;
   padding: 3rem;
   border-radius: 10px;
-  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para o header na seção de cadastro */
+.form-header {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  width: 100%; /* Garante que o header ocupe toda a largura disponível */
+  margin-bottom: 2rem; /* Espaço abaixo do header */
+}
+
+.form-header h3 {
+  font-size: 1.5rem; /* Ajusta o tamanho da fonte, se necessário */
+  color: #6c63ff; /* Cor do texto, ajuste conforme necessário */
+  text-align: center; /* Centraliza o texto dentro do h3 */
 }
 
 /*Grupo de inputs*/
 .input-group {
   display: flex;
   flex-direction: column; /* Empilha inputs verticalmente dentro de cada grupo */
-  gap: 1rem;
-  flex: 1;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 /*Mexendo nos inputs*/
@@ -69,12 +83,12 @@ body {
 
 /* Estilos para os inputs de texto */
 .input-box input {
-  margin: 0.6rem 0;
+  width: 100%;
   padding: 1rem;
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 6px #0000001c;
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .input-box input:hover {
