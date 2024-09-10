@@ -60,7 +60,6 @@ body {
   display: flex;
   justify-content: center; /* Centraliza o conteúdo horizontalmente */
   width: 100%; /* Garante que o header ocupe toda a largura disponível */
-  margin-bottom: 2rem; /* Espaço abaixo do header */
 }
 
 .form-header h3 {
@@ -74,6 +73,7 @@ body {
   display: flex;
   gap: 1.5rem;
   width: 100%;
+  margin-top: 0;
 }
 
 /*Mexendo nos inputs*/
@@ -107,7 +107,7 @@ body {
 /* Links de navegação */
 .nav-group {
   position: absolute;
-  right: 0; /* Alinha os links à direita do header */
+  right: 0; /* Alinha os links à direita do header, onde fica relacionado ao elemento principal */
   display: flex;
   gap: 1rem;
 }
