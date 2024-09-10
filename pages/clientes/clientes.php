@@ -3,6 +3,12 @@
     <h3>Clientes</h3>
 </header>
 
+
+<div>
+    <a href="#">Novo Contato</a>
+</div>
+
+
 <table>
     <thead>
         <tr>

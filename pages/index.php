@@ -1,5 +1,6 @@
 <?php include("../database/conexao.php"); ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -43,7 +44,11 @@
                         break;
 
                     case 'clientes':
-                        include("clientes.php");
+                        include("clientes/clientes.php");
+                        break;
+
+                    case 'cad-clientes':
+                        include("clientes/cad-clientes.php");
                         break;
 
                     case 'servicos':
