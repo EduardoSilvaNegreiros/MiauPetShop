@@ -5,7 +5,8 @@
 
 
 <div>
-    <a href="#">Novo Contato</a>
+    <!-- Redireciona para a pagina de cadastro de clientes dentro da pagina index sem sair dela -->
+    <a href="index.php?menuop=cad-clientes">Novo Contato</a>
 </div>
 
 
