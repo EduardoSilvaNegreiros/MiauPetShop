@@ -27,22 +27,26 @@ body {
   border-radius: 10px;
 }
 
-/* Header */
+/* Header geral */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribui o espaço entre os itens */
   align-items: center;
+  width: 100%; /* Garante que o header ocupe toda a largura disponível */
   margin-bottom: 2rem;
+  position: relative; /* Permite que o nav-group seja posicionado de forma absoluta dentro do header */
 }
 
 .header h1 {
   font-size: 2rem;
   color: #6c63ff;
+  text-align: center; /* Centraliza o texto do h1 */
+  flex: 1; /* Permite que o <h1> ocupe o máximo de espaço possível */
 }
 
 /*Estilos para o formulário */
 .form {
-  width: 100vw;
+  width: 100%;
   max-width: 100%;
   padding: 3rem;
   border-radius: 10px;
@@ -60,15 +64,14 @@ body {
 }
 
 .form-header h3 {
-  font-size: 1.5rem; /* Ajusta o tamanho da fonte, se necessário */
-  color: #6c63ff; /* Cor do texto, ajuste conforme necessário */
+  font-size: 1.5rem; 
+  color: #6c63ff; 
   text-align: center; /* Centraliza o texto dentro do h3 */
 }
 
 /*Grupo de inputs*/
 .input-group {
   display: flex;
-  flex-direction: column; /* Empilha inputs verticalmente dentro de cada grupo */
   gap: 1.5rem;
   width: 100%;
 }
@@ -78,7 +81,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1rem;
-  width: 100%;
+  flex: 1; /* Faz os inputs ocuparem o mesmo espaço */
 }
 
 /* Estilos para os inputs de texto */
@@ -103,6 +106,8 @@ body {
 
 /* Links de navegação */
 .nav-group {
+  position: absolute;
+  right: 0; /* Alinha os links à direita do header */
   display: flex;
   gap: 1rem;
 }
@@ -154,10 +159,6 @@ tr:nth-child(even) {
   width: 100%; /* Ocupa toda a largura do contêiner pai */
   display: flex;
   justify-content: center; /* Centraliza a tabela horizontalmente */
-}
-
-/* Adiciona um pouco de margem e espaçamento */
-.table-container {
   padding: 1rem; /* Espaçamento ao redor da tabela */
 }
 
