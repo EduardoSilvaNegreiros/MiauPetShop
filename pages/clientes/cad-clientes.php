@@ -34,5 +34,8 @@
                 <input type="text" name="telefoneCliente">
             </div>
         </div>
+        <div>
+            <input type="button" value="Adicionar" name="btnAdicionar">
+        </div>
     </form>
 </div>

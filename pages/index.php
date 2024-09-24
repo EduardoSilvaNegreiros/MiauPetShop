@@ -33,6 +33,7 @@ include("../database/conexao.php");
                         <a href="index.php?menuop=servicos" class="nav-link">Serviços</a>
                         <a href="index.php?menuop=pets" class="nav-link">Pets</a>
                     </nav>
+                </div> <!-- Esta div estava sem fechamento -->
             </header>
 
             <main>
