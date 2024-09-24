@@ -6,27 +6,42 @@
         <form action="" method="post">
             <div class="input-group">
                 <div class="input-box">
-                    <label for="cpfCliente">Cpf</label>
-                    <input type="text" name="cpfCliente">
+                    <label for="cpfCliente">CPF</label>
+                    <input type="text" name="cpfCliente" id="cpfCliente" required>
+                </div>
 
+                <div class="input-box">
                     <label for="dataNascCliente">Data de Nascimento</label>
-                    <input type="text" name="dataNascCliente">
+                    <input type="date" name="dataNascCliente" id="dataNascCliente" required>
+                </div>
 
+                <div class="input-box">
                     <label for="emailCliente">E-mail</label>
-                    <input type="text" name="emailCliente">
+                    <input type="email" name="emailCliente" id="emailCliente" required>
+                </div>
 
+                <div class="input-box">
                     <label for="nomeCliente">Nome</label>
-                    <input type="text" name="nomeCliente">
+                    <input type="text" name="nomeCliente" id="nomeCliente" required>
+                </div>
 
+                <div class="input-box">
                     <label for="sexoCliente">Sexo</label>
-                    <input type="text" name="sexoCliente">
+                    <select name="sexoCliente" id="sexoCliente" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
 
+                <div class="input-box">
                     <label for="telefoneCliente">Telefone</label>
-                    <input type="text" name="telefoneCliente">
+                    <input type="text" name="telefoneCliente" id="telefoneCliente" required>
                 </div>
             </div>
             <div>
-                <input type="button" value="Adicionar" name="btnAdicionar">
+                <input type="submit" value="Adicionar" name="btnAdicionar">
             </div>
         </form>
     </div>

@@ -25,70 +25,68 @@ body {
   background-color: #fff;
   padding: 3rem;
   border-radius: 10px;
-  margin: 0 auto;
-  max-width: 800px;
 }
 
 /* Header geral */
 .header {
   display: flex;
-  justify-content: space-between; /* Distribui o espaço entre os itens */
+  justify-content: space-between;
   align-items: center;
-  width: 100%; /* Garante que o header ocupe toda a largura disponível */
+  width: 100%;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .header h1 {
   font-size: 2rem;
   color: #6c63ff;
-  text-align: center; /* Centraliza o texto do h1 */
-  flex: 1; /* Permite que o <h1> ocupe o máximo de espaço possível */
+  text-align: center;
+  flex: 1;
 }
 
-/*Estilos para o formulário */
+/* Estilos para o formulário */
 .form {
   width: 100%;
-  max-width: 100%;
   padding: 2rem;
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  margin-top: 1rem;
 }
 
 /* Estilos para o header na seção de cadastro */
 .form-header {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  width: 100%; /* Garante que o header ocupe toda a largura disponível */
+  justify-content: center;
+  width: 100%;
 }
 
 .form-header h3 {
   font-size: 1.5rem;
   color: #6c63ff;
-  text-align: center; /* Centraliza o texto dentro do h3 */
+  text-align: center;
 }
 
-/*Grupo de inputs*/
+/* Grupo de inputs */
 .input-group {
   display: flex;
-  gap: 1.5rem;
-  width: 100%;
-  margin-top: 0;
+  flex-wrap: wrap; /* Permite que os inputs quebrem linha */
+  gap: 1.5rem; /* Espaçamento entre os inputs */
+  width: 100%; /* Ocupa toda a largura do formulário */
 }
 
-/*Mexendo nos inputs*/
+/* Estilos para os inputs */
 .input-box {
+  flex: 1 1 calc(50% - 1.5rem); /* Ajuste para ocupar 50% menos o espaço de gap */
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1rem;
-  flex: 1; /* Faz os inputs ocuparem o mesmo espaço */
 }
 
 /* Estilos para os inputs de texto */
-.input-box input {
-  width: 100%;
+.input-box input,
+.input-box select {
+  width: 100%; /* Garante que os inputs ocupem toda a largura da input-box */
   padding: 1rem;
   border: none;
   border-radius: 10px;
@@ -96,20 +94,21 @@ body {
   margin-bottom: 1rem;
 }
 
-.input-box input:hover {
-  /* Efeito hover nos inputs */
+.input-box input:hover,
+.input-box select:hover {
   background-color: #eeeeee75;
 }
 
-.input-box input:focus-visible {
-  /* Estilo quando o input está focado */
-  outline: 1px solid #6c63ff;
+.input-box input:focus,
+.input-box select:focus {
+  outline: 1px solid #6c63ff; /* Destaque ao focar */
+  background-color: #e6e6fa; /* Mudança no fundo ao focar */
 }
 
 /* Links de navegação */
 .nav-group {
   position: absolute;
-  right: 0; /* Alinha os links à direita do header, onde fica relacionado ao elemento principal */
+  right: 0;
   display: flex;
   gap: 1rem;
 }
@@ -128,40 +127,43 @@ body {
   background-color: #5a52d1;
 }
 
+.nav-link:focus {
+  outline: 2px dashed #6c63ff; /* Um destaque visível para o foco */
+}
+
 /* ========================
    Estilos Para Tabelas
 ======================== */
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
 table {
-  width: 100%; /* Ocupa toda a largura disponível do contêiner */
-  border-collapse: collapse; /* Remove espaçamento entre células */
-  margin: 0 auto; /* Centraliza a tabela horizontalmente */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
 }
 
 /* Estilo para células da tabela */
 th,
 td {
-  padding: 10px; /* Adiciona espaçamento interno nas células */
-  border: 1px solid #ddd; /* Adiciona uma borda fina e clara */
-  text-align: center; /* Centraliza o texto dentro das células */
+  padding: 15px; /* Aumenta o padding para mais espaço */
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
 /* Estilo para o cabeçalho da tabela */
 th {
-  background-color: #6c63ff; /* Cor de fundo do cabeçalho */
-  color: #fff; /* Cor do texto do cabeçalho */
+  background-color: #6c63ff;
+  color: #fff;
 }
 
 /* Estilo para linhas alternadas */
 tr:nth-child(even) {
-  background-color: #f2f2f2; /* Cor de fundo das linhas pares */
-}
-
-/* Estilo para a tabela dentro de um contêiner */
-.table-container {
-  width: 100%; /* Ocupa toda a largura do contêiner pai */
-  display: flex;
-  justify-content: center; /* Centraliza a tabela horizontalmente */
-  padding: 1rem; /* Espaçamento ao redor da tabela */
+  background-color: #f2f2f2;
 }
 
 /* Responsividade */
@@ -171,11 +173,16 @@ tr:nth-child(even) {
     padding: 2rem;
   }
 
-  .header h1 {
-    font-size: 1.5rem; /* Ajusta o tamanho da fonte em telas menores */
+  .form {
+    padding: 2rem;
   }
 
-  .nav-group {
+  .input-group {
     flex-direction: column; /* Muda a direção para coluna em telas pequenas */
+  }
+
+  .input-box {
+    width: 100%; /* Ajusta a largura dos inputs para ocupar a tela inteira em dispositivos móveis */
+    flex: none; /* Remove a flexibilidade em dispositivos móveis */
   }
 }
