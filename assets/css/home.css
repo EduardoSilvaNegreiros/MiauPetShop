@@ -25,6 +25,8 @@ body {
   background-color: #fff;
   padding: 3rem;
   border-radius: 10px;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
 /* Header geral */
@@ -34,7 +36,6 @@ body {
   align-items: center;
   width: 100%; /* Garante que o header ocupe toda a largura disponível */
   margin-bottom: 2rem;
-  position: relative; /* Permite que o nav-group seja posicionado de forma absoluta dentro do header */
 }
 
 .header h1 {
@@ -48,11 +49,12 @@ body {
 .form {
   width: 100%;
   max-width: 100%;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
 }
 
 /* Estilos para o header na seção de cadastro */
@@ -63,8 +65,8 @@ body {
 }
 
 .form-header h3 {
-  font-size: 1.5rem; 
-  color: #6c63ff; 
+  font-size: 1.5rem;
+  color: #6c63ff;
   text-align: center; /* Centraliza o texto dentro do h3 */
 }
 
@@ -169,12 +171,11 @@ tr:nth-child(even) {
     padding: 2rem;
   }
 
-  .form {
-    flex-direction: column;
-    padding: 2rem;
+  .header h1 {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte em telas menores */
   }
 
-  .input-box {
-    width: 100%; /* Ajusta a largura dos inputs para ocupar a tela inteira em dispositivos móveis */
+  .nav-group {
+    flex-direction: column; /* Muda a direção para coluna em telas pequenas */
   }
 }
