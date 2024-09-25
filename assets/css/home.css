@@ -166,15 +166,3 @@ tr:nth-child(even) {
 .button-add:hover {
   background-color: #5a52d1; /* Cor ao passar o mouse */
 }
-
-/* Responsividade */
-@media screen and (max-width: 768px) {
-  .container {
-    width: 90%; /* Ajusta a largura do container em telas menores */
-    padding: 2rem; /* Mantém o padding consistente */
-  }
-
-  .input-group {
-    flex-direction: column; /* Muda a direção para coluna em telas pequenas */
-  }
-}
