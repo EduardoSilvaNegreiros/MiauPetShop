@@ -14,7 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0c0ce94d;
+  background: #0c0ce94d; /* Cor de fundo suave */
 }
 
 /* Container */
@@ -31,23 +31,25 @@ body {
 /* Header geral */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100%;
   margin-bottom: 2rem;
-  position: relative;
+  width: 100%;
+  text-align: center;
 }
 
 .header h1 {
   font-size: 2rem;
-  color: #6c63ff;
+  position: absolute;
+  color: #6c63ff; /* Cor principal */
   text-align: center;
   flex: 1;
+  margin: 0;
 }
 
 /* Estilos para o formulário */
 .form {
-  width: 100%; /* Permite que o formulário ocupe toda a largura do container */
+  width: 100%;
   display: flex;
   flex-direction: column; /* Mantém os elementos em coluna */
   align-items: center; /* Faz com que os filhos ocupem toda a largura */
@@ -92,6 +94,7 @@ body {
   box-shadow: 1px 1px 6px #0000001c;
   margin-bottom: 1rem;
   font-size: 1rem; /* Aumenta o tamanho da fonte para melhor legibilidade */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Transição suave */
 }
 
 .input-box input:hover,
@@ -107,16 +110,14 @@ body {
 
 /* Links de navegação */
 .nav-group {
-  position: absolute;
-  right: 0;
   display: flex;
-  gap: 1rem;
+  margin-left: auto;
 }
 
 .nav-link {
-  background-color: #6c63ff;
+  background-color: #6c63ff; /* Cor do link */
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 5px;
   font-size: 15px;
   text-decoration: none;
@@ -124,7 +125,7 @@ body {
 }
 
 .nav-link:hover {
-  background-color: #5a52d1;
+  background-color: #5a52d1; /* Cor ao passar o mouse */
 }
 
 .nav-link:focus {
@@ -155,13 +156,13 @@ td {
 
 /* Estilo para o cabeçalho da tabela */
 th {
-  background-color: #6c63ff;
+  background-color: #6c63ff; /* Cor do cabeçalho */
   color: #fff;
 }
 
 /* Estilo para linhas alternadas */
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Cor das linhas alternadas */
 }
 
 /* Responsividade */
