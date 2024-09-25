@@ -39,6 +39,6 @@
         </div>
     </div>
     <div>
-        <input type="submit" value="Adicionar" name="btnAdicionar">
+        <input type="submit" value="Adicionar" name="btnAdicionar" class="button-add">
     </div>
 </form>
