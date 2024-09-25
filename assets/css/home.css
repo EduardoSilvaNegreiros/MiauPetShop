@@ -47,15 +47,12 @@ body {
   margin: 0;
 }
 
-/* Estilos para o formulário */
+/* Form */
 .form {
-  width: 100%;
+  width: 800px; /* Garante que o formulário ocupe toda a largura do container */
   display: flex;
   flex-direction: column; /* Mantém os elementos em coluna */
-  align-items: center; /* Faz com que os filhos ocupem toda a largura */
-  background-color: #fff;
-  padding: 3rem;
-  border-radius: 10px;
+  align-items: center; /* Alinha os filhos ao centro */
 }
 
 /* Form Header */
@@ -78,7 +75,6 @@ body {
 
 /* Estilos para os inputs */
 .input-box {
-  flex: 1 1 calc(50% - 1.5rem); /* Ajuste para ocupar 50% menos o espaço de gap */
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1rem;
@@ -149,7 +145,7 @@ table {
 /* Estilo para células da tabela */
 th,
 td {
-  padding: 15px; /* Aumenta o padding para mais espaço */
+  padding: 10px; /* Aumenta o padding para mais espaço */
   border: 1px solid #ddd;
   text-align: center;
 }
