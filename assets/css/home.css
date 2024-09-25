@@ -31,18 +31,27 @@ body {
 /* Header geral */
 .header {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-  width: 100%;
-  text-align: center;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  margin-bottom: 2rem; /* Espaçamento inferior */
+  position: relative; /* Mantém a posição relativa dentro do container */
 }
 
 .header h1 {
-  font-size: 2rem;
-  position: relative; /* Alterado para relativo */
+  font-size: 2rem; /* Tamanho da fonte do título */
   color: #6c63ff; /* Cor principal */
-  text-align: center;
+  text-align: center; /* Centraliza o texto */
+  margin: 0; /* Remove margens padrão do h1 */
+  justify-content: center;
+  align-items: center;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  margin-bottom: 2rem; /* Espaçamento inferior */
+  width: 100%; /* Garante que o cabeçalho ocupe a largura total do container */
 }
 
 /* Grupo de inputs */
