@@ -22,7 +22,7 @@
         <!-- Formulário de cadastro -->
         <div class="form">
             <!-- Configuração do formulário para envio por método POST -->
-            <form action="../process/process_register.php" method="POST">
+            <form action="#" method="POST">
 
                 <!-- Cabeçalho do formulário com título e botões de navegação -->
                 <div class="form-header">

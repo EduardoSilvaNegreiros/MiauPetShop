@@ -25,10 +25,10 @@
         <!-- Seção do formulário -->
         <div class="form">
             <!-- Definição do formulário com o método POST -->
-            <form action="POST">
+            <form action="./process/process_login.php" method="POST">
 
                 <!-- Cabeçalho do formulário -->
-                <div class="form-header">
+                <div class=" form-header">
                     <div class="title">
                         <h1>Login</h1>
                     </div>
