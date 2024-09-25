@@ -68,7 +68,11 @@ include("../database/conexao.php");
 
                     // Caso o valor de $menuop seja 'pets', inclui o arquivo 'pets.php'.
                     case 'pets':
-                        include("pets.php");
+                        include("../pages/pets/pets.php");
+                        break;
+
+                    case 'cad-pets':
+                        include("../pages/pets/cad-pets.php");
                         break;
 
                     // Caso o valor de $menuop não corresponda a nenhum dos casos anteriores, inclui o arquivo 'home.php'.

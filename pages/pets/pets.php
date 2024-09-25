@@ -1,5 +1,10 @@
-<!-- Título da seção -->
-<h3>Pets</h3>
+<header>
+    <h3>Pets</h3>
+</header>
+
+<div>
+    <a href="index.php?menuop=cad-pets">Novo Pet</a>
+</div>
 
 <!-- Início da tabela que contém informações dos pets -->
 <table>

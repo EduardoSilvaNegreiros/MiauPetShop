@@ -4,8 +4,7 @@
 </header>
 
 <div>
-    <!-- Link para redirecionar o usuário para a página de cadastro de clientes dentro da página index, sem sair dela. -->
-    <a href="index.php?menuop=cad-clientes">Novo Contato</a>
+    <a href="index.php?menuop=cad-clientes">Novo Cliente</a>
 </div>
 
 <!-- Tabela para exibir os dados dos clientes -->
