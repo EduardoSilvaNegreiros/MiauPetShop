@@ -1,6 +1,6 @@
-<?php 
+<?php
 // Inclui o arquivo de conexão com o banco de dados.
-include("../database/conexao.php"); 
+include("../database/conexao.php");
 ?>
 
 <!DOCTYPE html>
@@ -46,27 +46,31 @@ include("../database/conexao.php");
 
                 // Estrutura de controle switch/case para carregar diferentes páginas com base no valor de $menuop.
                 switch ($menuop) {
-                    // Caso o valor de $menuop seja 'home', inclui o arquivo 'home.php'.
-                    case 'home':
-                        include("home.php");
+                        // Caso o valor de $menuop seja 'home', inclui o arquivo 'home.php'.
+                    case 'funcionarios':
+                        include("../pages/funcionarios/cad-funcionarios.php");
                         break;
 
-                    // Caso o valor de $menuop seja 'clientes', inclui o arquivo 'clientes.php' dentro da pasta 'clientes'.
+                    case 'cad-clientes':
+                        include("../pages/funcionarios/cad-funcionarios.php");
+                        break;
+
+                        // Caso o valor de $menuop seja 'clientes', inclui o arquivo 'clientes.php' dentro da pasta 'clientes'.
                     case 'clientes':
                         include("clientes/clientes.php");
                         break;
 
-                    // Caso o valor de $menuop seja 'cad-clientes', inclui o arquivo 'cad-clientes.php' dentro da pasta 'clientes'.
+                        // Caso o valor de $menuop seja 'cad-clientes', inclui o arquivo 'cad-clientes.php' dentro da pasta 'clientes'.
                     case 'cad-clientes':
                         include("clientes/cad-clientes.php");
                         break;
 
-                    // Caso o valor de $menuop seja 'servicos', inclui o arquivo 'servicos.php'.
+                        // Caso o valor de $menuop seja 'servicos', inclui o arquivo 'servicos.php'.
                     case 'servicos':
                         include("servicos.php");
                         break;
 
-                    // Caso o valor de $menuop seja 'pets', inclui o arquivo 'pets.php'.
+                        // Caso o valor de $menuop seja 'pets', inclui o arquivo 'pets.php'.
                     case 'pets':
                         include("../pages/pets/pets.php");
                         break;
@@ -75,7 +79,7 @@ include("../database/conexao.php");
                         include("../pages/pets/cad-pets.php");
                         break;
 
-                    // Caso o valor de $menuop não corresponda a nenhum dos casos anteriores, inclui o arquivo 'home.php'.
+                        // Caso o valor de $menuop não corresponda a nenhum dos casos anteriores, inclui o arquivo 'home.php'.
                     default:
                         include("home.php");
                         break;
