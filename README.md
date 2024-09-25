@@ -24,9 +24,8 @@ Este sistema foi desenvolvido com o objetivo de ajudar donos de PetShops a geren
 
 1. Clone este repositório.
 2. Configure o servidor local (ex: XAMPP ou MAMP) com suporte a **PHP** e **MySQL**.
-3. Importe o banco de dados (arquivo `.sql` disponível na pasta `/db`).
-4. Configure as variáveis de conexão ao banco de dados no arquivo `config.php`.
-5. Acesse a plataforma através do navegador.
+3. Configure as variáveis de conexão ao banco de dados no arquivo `config.php`.
+4. Acesse a plataforma através do navegador.
 
 ## Interface
 
