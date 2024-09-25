@@ -28,7 +28,7 @@ include("../database/conexao.php");
                 <div class="nav-group">
                     <nav>
                         <!-- Links de navegação que apontam para diferentes seções da aplicação. -->
-                        <a href="index.php?menuop=home" class="nav-link">Home</a>
+                        <a href="index.php?menuop=funcionarios" class="nav-link">Funcionários</a>
                         <a href="index.php?menuop=clientes" class="nav-link">Clientes</a>
                         <a href="index.php?menuop=servicos" class="nav-link">Serviços</a>
                         <a href="index.php?menuop=pets" class="nav-link">Pets</a>
@@ -48,11 +48,11 @@ include("../database/conexao.php");
                 switch ($menuop) {
                         // Caso o valor de $menuop seja 'home', inclui o arquivo 'home.php'.
                     case 'funcionarios':
-                        include("../pages/funcionarios/cad-funcionarios.php");
+                        include("funcionarios/funcionarios.php");
                         break;
 
-                    case 'cad-clientes':
-                        include("../pages/funcionarios/cad-funcionarios.php");
+                    case 'cad-funcionarios':
+                        include("funcionarios/cad-funcionarios.php");
                         break;
 
                         // Caso o valor de $menuop seja 'clientes', inclui o arquivo 'clientes.php' dentro da pasta 'clientes'.
@@ -72,16 +72,15 @@ include("../database/conexao.php");
 
                         // Caso o valor de $menuop seja 'pets', inclui o arquivo 'pets.php'.
                     case 'pets':
-                        include("../pages/pets/pets.php");
+                        include("pets/pets.php");
                         break;
 
                     case 'cad-pets':
                         include("../pages/pets/cad-pets.php");
                         break;
 
-                        // Caso o valor de $menuop não corresponda a nenhum dos casos anteriores, inclui o arquivo 'home.php'.
                     default:
-                        include("home.php");
+                        include("funcionarios/funcionarios.php");
                         break;
                 }
                 ?>

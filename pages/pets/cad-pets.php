@@ -15,11 +15,6 @@
         </div>
 
         <div class="input-box">
-            <label for="dataNascPet">Data de Nascimento</label>
-            <input type="date" name="dataNascPet" id="dataNascPet" required>
-        </div>
-
-        <div class="input-box">
             <label for="sexoPet">Sexo</label>
             <select name="sexoPet" id="sexoPet" required>
                 <option value="" disabled selected>Selecione</option>
@@ -27,6 +22,12 @@
                 <option value="feminino">Feminino</option>
             </select>
         </div>
+
+        <div class="input-box">
+            <label for="dataNascPet">Data de Nascimento</label>
+            <input type="date" name="dataNascPet" id="dataNascPet" required>
+        </div>
+
     </div>
     <div>
         <input type="submit" value="Adicionar" name="btnAdicionar" class="button-add">
