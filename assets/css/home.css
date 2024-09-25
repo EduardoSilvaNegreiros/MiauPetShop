@@ -31,16 +31,16 @@ body {
 /* Header geral */
 .header {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   align-items: center; /* Centraliza verticalmente */
   margin-bottom: 2rem;
   width: 100%; /* Garante que o cabeçalho ocupe a largura total do container */
+  position: relative; /* Mantém o cabeçalho dentro do container */
 }
 
 .header h1 {
   font-size: 2rem;
   color: #6c63ff; /* Cor principal */
-  position: absolute; /* Permite centralizar o título */
   text-align: center; /* Centraliza o texto */
 }
 
@@ -92,8 +92,9 @@ body {
 
 /* Links de navegação */
 .nav-group {
-  display: flex;
-  margin-left: auto; /* Empurra a nav para a direita */
+  position: absolute; /* Permite posicionar os links à direita */
+  right: 0; /* Alinha à direita */
+  display: flex; /* Mantém os links em linha */
 }
 
 .nav-link {
