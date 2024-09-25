@@ -19,13 +19,13 @@ body {
 
 /* Container */
 .container {
-  width: 80%;
-  max-width: 800px; /* Limita a largura máxima do container */
-  height: auto;
+  width: 80%; 
+  max-height: 600px; /* Altura máxima do container */
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
   background-color: #fff;
-  padding: 3rem;
+  padding: 2rem; /* Ajustado para um padding mais uniforme */
   border-radius: 10px;
+  overflow-y: auto; /* Permite rolagem vertical caso o conteúdo exceda a altura */
 }
 
 /* Header geral */
@@ -40,36 +40,16 @@ body {
 
 .header h1 {
   font-size: 2rem;
-  position: absolute;
+  position: relative; /* Alterado para relativo */
   color: #6c63ff; /* Cor principal */
   text-align: center;
-  flex: 1;
-  margin: 0;
-}
-
-/* Form */
-.form {
-  width: 800px; /* Garante que o formulário ocupe toda a largura do container */
-  display: flex;
-  flex-direction: column; /* Mantém os elementos em coluna */
-  align-items: center; /* Alinha os filhos ao centro */
-}
-
-/* Form Header */
-.form-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Alinha verticalmente ao centro */
-  width: 100%;
-  margin-bottom: 3rem;
 }
 
 /* Grupo de inputs */
 .input-group {
   display: flex;
-  flex-wrap: wrap; /* Permite que os inputs quebrem linha */
-  flex: 1 1 100%;
-  gap: 1.5rem; /* Espaçamento entre os inputs */
+  flex-direction: column; /* Alinha os inputs em coluna */
+  gap: 1rem; /* Espaçamento entre os inputs */
   width: 100%; /* Ocupa toda a largura do formulário */
 }
 
@@ -77,7 +57,7 @@ body {
 .input-box {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.1rem;
+  width: 100%; /* Garante que as caixas ocupem toda a largura */
 }
 
 /* Estilos para os inputs de texto */
@@ -88,7 +68,6 @@ body {
   border: 1px solid #ddd; /* Adicionando borda */
   border-radius: 10px;
   box-shadow: 1px 1px 6px #0000001c;
-  margin-bottom: 1rem;
   font-size: 1rem; /* Aumenta o tamanho da fonte para melhor legibilidade */
   transition: background-color 0.3s ease, border 0.3s ease; /* Transição suave */
 }
@@ -164,20 +143,11 @@ tr:nth-child(even) {
 /* Responsividade */
 @media screen and (max-width: 768px) {
   .container {
-    width: 90%;
-    padding: 2rem;
-  }
-
-  .form {
-    padding: 2rem;
+    width: 90%; /* Ajusta a largura do container em telas menores */
+    padding: 2rem; /* Mantém o padding consistente */
   }
 
   .input-group {
     flex-direction: column; /* Muda a direção para coluna em telas pequenas */
-  }
-
-  .input-box {
-    width: 100%; /* Ajusta a largura dos inputs para ocupar a tela inteira em dispositivos móveis */
-    flex: none; /* Remove a flexibilidade em dispositivos móveis */
   }
 }
