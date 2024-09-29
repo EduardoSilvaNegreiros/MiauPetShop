@@ -17,52 +17,50 @@ body {
   justify-content: center;
   align-items: center;
   background: #0c0ce94d;
+}
 
-  /* ========================
+/* ========================
    Estilos Para Tabelas
 ======================== */
-  table {
-    width: 100%; /* Ocupa toda a largura disponível do contêiner */
-    border-collapse: collapse; /* Remove espaçamento entre células */
-    margin: 0 auto; /* Centraliza a tabela horizontalmente */
-  }
+table {
+  width: 100%; /* Ocupa toda a largura disponível do contêiner */
+  border-collapse: collapse; /* Remove espaçamento entre células */
+  margin: 0 auto; /* Centraliza a tabela horizontalmente */
+}
 
-  /* Estilo para células da tabela */
-  th,
-  td {
-    padding: 10px; /* Adiciona espaçamento interno nas células */
-    border: 1px solid #ddd; /* Adiciona uma borda fina e clara */
-    text-align: center; /* Centraliza o texto dentro das células */
-  }
+/* Estilo para células da tabela */
+th, td {
+  padding: 10px; /* Adiciona espaçamento interno nas células */
+  border: 1px solid #ddd; /* Adiciona uma borda fina e clara */
+  text-align: center; /* Centraliza o texto dentro das células */
+}
 
-  /* Estilo para o cabeçalho da tabela */
-  th {
-    background-color: #6c63ff; /* Cor de fundo do cabeçalho */
-    color: #fff; /* Cor do texto do cabeçalho */
-  }
+/* Estilo para o cabeçalho da tabela */
+th {
+  background-color: #6c63ff; /* Cor de fundo do cabeçalho */
+  color: #fff; /* Cor do texto do cabeçalho */
+}
 
-  /* Estilo para linhas alternadas */
-  tr:nth-child(even) {
-    background-color: #f2f2f2; /* Cor de fundo das linhas pares */
-  }
+/* Estilo para linhas alternadas */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Cor de fundo das linhas pares */
+}
 
-  /* Estilo para a tabela dentro de um contêiner */
-  .table-container {
-    width: 100%; /* Ocupa toda a largura do contêiner pai */
-    display: flex;
-    justify-content: center; /* Centraliza a tabela horizontalmente */
-  }
+/* Estilo para a tabela dentro de um contêiner */
+.table-container {
+  width: 100%; /* Ocupa toda a largura do contêiner pai */
+  display: flex;
+  justify-content: center; /* Centraliza a tabela horizontalmente */
+}
 
-  /* Adiciona um pouco de margem e espaçamento */
-  .table-container {
-    padding: 1rem; /* Espaçamento ao redor da tabela */
-  }
+/* Adiciona um pouco de margem e espaçamento */
+.table-container {
+  padding: 1rem; /* Espaçamento ao redor da tabela */
 }
 
 /* ========================
    Container
 ======================== */
-
 .container {
   width: 80%;
   height: auto;
@@ -89,7 +87,6 @@ h1 {
 /* ========================
    Header e Navegação
 ======================== */
-
 .header {
   display: flex;
   justify-content: center; /* Centraliza o conteúdo no header */
@@ -129,7 +126,6 @@ h1 {
 /* ========================
    Responsividade
 ======================== */
-
 @media screen and (max-width: 768px) {
   .container {
     width: 90%;
