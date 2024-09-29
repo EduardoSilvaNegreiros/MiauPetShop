@@ -1,87 +1,93 @@
-@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"); /*Para colocar a fonte do projeto*/
+/* ========================
+   Importação de Fontes
+======================== */
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"); /* Importa a fonte Nerko One do Google Fonts */
+
 /* ========================
    Estilos Gerais
 ======================== */
 * {
-  /*Para zerar todo o nosso css*/
+  /* Remove as margens e o padding padrão */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nerko One", sans-serif;
+  font-family: "Nerko One", sans-serif; /* Aplica a fonte Nerko One em todo o projeto */
 }
 
-/*Para mexer no conteúdo do nosso body*/
 body {
-  width: 100%; /*Para ter a largura da tela inteira*/
-  height: 100vh; /*Para ter a altura da tela inteira*/
-  display: flex; /*O Flexbox é um conceito do CSS3 que visa organizar os elementos de uma página HTML dentro de seus containers de forma dinâmica. Ou seja, independente das suas dimensões eles sempre manterão um layout flexível dentro do seu elemento pai, reorganizando-se e acordo com a necessidade. 
-  REFERÊNCIA: https://www.devmedia.com.br/css3-flexbox-funcionamento-e-propriedades/29532;
-  */
+  /* Define o layout da página */
+  width: 100%; /* Ocupa a largura total da tela */
+  height: 100vh; /* Ocupa a altura total da tela */
+  display: flex;
   justify-content: center;
   align-items: center;
-  background: #0c0ce94d;
+  background: #0c0ce94d; /* Cor de fundo com leve opacidade */
 }
 
 /* ========================
-   Estilos do Formulário
+   Estilos do Container do Formulário
 ======================== */
-/*Container geral do formulário*/
 .container {
+  /* Estilos principais do container do formulário */
   width: 80%;
   height: 80vh;
   display: flex;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); /* Sombra para dar profundidade */
+  border-radius: 10px; /* Bordas arredondadas */
 }
 
-/*Estilos para a seção de imagem*/
+/* ========================
+   Seção de Imagem no Formulário
+======================== */
 .form-image {
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fde3a7d7;
-  padding: 1rem; /*O padding é uma propriedade CSS que define o espaçamento interno de um elemento, ou seja, a distância entre o conteúdo do elemento e as suas bordas.
-    1rem é igual ao tamanho padrão da fonte da raiz(root) do documento, normalmente 16px, logo 1rem é igual à 16px.
-    REFERÊNCIA:https://www.treinaweb.com.br/blog/unidades-de-medidas-no-css;
-    */
-    border-radius: 10px;
+  background-color: #fde3a7d7; /* Cor de fundo */
+  padding: 1rem;
+  border-radius: 10px;
 }
 
-/*Estilos para a imagem do logo*/
 .form-image img {
-  width: 100%; /* Ajuste a largura conforme necessário */
-  max-width: 31rem; /* Tamanho máximo */
+  /* Imagem do logo no formulário */
+  width: 100%; /* Ajusta a largura da imagem */
+  max-width: 31rem; /* Define um tamanho máximo */
 }
-/*Estilos para o formulário */
+
+/* ========================
+   Estilos do Formulário
+======================== */
 .form {
+  /* Container do formulário */
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column; /* Alinha os itens verticalmente */
   background-color: #fff;
   padding: 3rem;
   border-radius: 10px;
 }
 
-/*Mexendo no cabeçalho do formulário*/
+/* ========================
+   Cabeçalho do Formulário
+======================== */
 .form-header {
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .tittle {
-  /* Ajuste para o título do formulário */
   text-align: center;
   margin: 0;
 }
 
-/* Estilos para os botões no cabeçalho */
 .header-buttons {
   display: flex;
-  gap: 1rem; /* Espaço entre os botões */
+  gap: 1rem; /* Espaçamento entre os botões */
 }
 
 .header-buttons button {
@@ -99,10 +105,7 @@ body {
   background-color: #5a54e0;
 }
 
-/*Linha abaixo do título
-Em CSS, ::after cria um pseudo-elemento que é o último filho do elemento selecionado. Muitas vezes é usado para adicionar e melhorar o conteúdo de um elemento como a propriedade content. É inline por padrão.
-REFERÊNCIA: https://developer.mozilla.org/pt-BR/docs/Web/CSS/::after;
-*/
+/* Linha decorativa abaixo do título */
 .form-header h1::after {
   content: "";
   display: block;
@@ -111,13 +114,12 @@ REFERÊNCIA: https://developer.mozilla.org/pt-BR/docs/Web/CSS/::after;
   background-color: #6c63ff;
   margin: 0 auto;
   position: relative;
-  top: 0.5rem; /* Ajuste de posicionamento */
+  top: 0.5rem;
 }
 
 /* ========================
    Estilos dos Inputs
 ======================== */
-/*Grupo de inputs*/
 .input-group {
   display: flex;
   flex-wrap: wrap;
@@ -125,15 +127,13 @@ REFERÊNCIA: https://developer.mozilla.org/pt-BR/docs/Web/CSS/::after;
   padding: 1rem 0;
 }
 
-/*Mexendo nos inputs*/
 .input-box {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.1rem;
-  width: 48%;
+  width: 48%; /* Alinha dois inputs por linha */
 }
 
-/* Estilos para os inputs de texto */
 .input-box input {
   margin: 0.6rem 0;
   padding: 0.8rem 1.2rem;
@@ -143,19 +143,13 @@ REFERÊNCIA: https://developer.mozilla.org/pt-BR/docs/Web/CSS/::after;
 }
 
 .input-box input:hover {
-  /* Efeito hover nos inputs */
-  background-color: #eeeeee75;
+  background-color: #eeeeee75; /* Leve mudança de cor no hover */
 }
 
-/*A pseudo-classe :focus-visible exibirá um outline (ou outro estilo definido) somente quando o dispositivo/navegador (user agent) determinar que ele precisa estar visível. Normalmente, isso significa que ele aparecerá para usuários de teclado na interação com a tecla de tabulação, mas não para quem usa mouse.
-REFERÊNCIA: https://desenvolvimentoparaweb.com/css/acessibilidade-css/;
-*/
 .input-box input:focus-visible {
-  /* Estilo quando o input está focado */
-  outline: 1px solid #6c63ff;
+  outline: 1px solid #6c63ff; /* Borda visível no foco */
 }
 
-/* Estilos para os labels */
 .input-box label,
 .gender-title h6 {
   font-size: 0.75rem;
@@ -163,15 +157,13 @@ REFERÊNCIA: https://desenvolvimentoparaweb.com/css/acessibilidade-css/;
   color: #000000c0;
 }
 
-/*Mexendo no placeholder(Texto dentro dos inputs que somem quando digitamos algo)*/
 .input-box input::placeholder {
-  color: #000000be;
+  color: #000000be; /* Cor do texto do placeholder */
 }
 
 /* ========================
    Estilos de Gênero
 ======================== */
-/* Grupo de opções de gênero */
 .gender-group {
   display: flex;
   flex-wrap: wrap;
@@ -180,19 +172,16 @@ REFERÊNCIA: https://desenvolvimentoparaweb.com/css/acessibilidade-css/;
   padding: 0 0.5rem;
 }
 
-/* Cada input de gênero */
 .gender-input {
   display: flex;
   align-items: center;
-  margin-right: 1rem; /* Espaçamento horizontal entre as opções */
+  margin-right: 1rem; /* Espaçamento entre as opções */
 }
 
 .gender-input input {
-  /* Espaçamento entre o input e o label */
   margin-right: 0.35rem;
 }
 
-/*Estilos para os labels dos inputs de gênero*/
 .gender-input label {
   font-size: 0.81rem;
   font-weight: 600;
@@ -200,9 +189,8 @@ REFERÊNCIA: https://desenvolvimentoparaweb.com/css/acessibilidade-css/;
 }
 
 /* ========================
-   Estilos do Botão Continuar
+   Botão Continuar
 ======================== */
-/*Botão de continuar*/
 .continue-button button {
   width: 100%;
   margin-top: 2.5rem;
@@ -211,24 +199,21 @@ REFERÊNCIA: https://desenvolvimentoparaweb.com/css/acessibilidade-css/;
   padding: 0.62rem;
   border-radius: 5px;
   cursor: pointer;
-  text-decoration: none;
   font-size: 0.93rem;
   font-weight: 500;
   color: #fff;
 }
 
-/* Efeito hover no botão de continuar */
 .continue-button button:hover {
-  background-color: #5a54e0;
+  background-color: #5a54e0; /* Efeito hover */
 }
 
 /* ========================
    Estilos Responsivos
 ======================== */
-/*Para deixar nossa pagina de login responsiva quando tiver até 1330px a tela*/
 @media screen and (max-width: 1330px) {
   .form-image {
-    display: none;
+    display: none; /* Remove a imagem em telas menores */
   }
 
   .container {
@@ -240,13 +225,11 @@ REFERÊNCIA: https://desenvolvimentoparaweb.com/css/acessibilidade-css/;
   }
 }
 
-/*Para deixar nossa pagina de login responsiva quando tiver até 1064px a tela*/
 @media screen and (max-width: 1064px) {
   .input-group {
-    flex-direction: column;
-    overflow-y: auto;
-    flex-wrap: nowrap;
+    flex-direction: column; /* Alinha inputs verticalmente */
+    overflow-y: auto; /* Permite rolagem vertical */
     max-height: 25rem;
-    padding: 0 1rem; /* Adicionado padding */
+    padding: 0 1rem;
   }
 }
