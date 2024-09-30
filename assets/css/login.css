@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"); /* Para a fonte do projeto */
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"); /* Importa a fonte Nerko One */
 
 /* ========================
    Estilos Gerais
 ======================== */
-/* Para zerar o CSS */
+
+/* Zera as margens e paddings padrões dos elementos e define a fonte global */
 * {
   padding: 0;
   margin: 0;
@@ -11,180 +12,212 @@
   font-family: "Nerko One", sans-serif;
 }
 
+/* Corpo da página: centraliza o conteúdo e define o fundo */
 body {
-  width: 100%; /* Largura total da tela */
+  width: 100%; /* Ocupa toda a largura */
   height: 100vh; /* Altura total da tela */
-  display: flex; /* Flexbox para centralizar */
+  display: flex; /* Flexbox para centralizar o conteúdo */
   justify-content: center;
   align-items: center;
-  background: #0c0ce94d; /* Cor de fundo */
+  background: #0c0ce94d; /* Fundo com leve transparência */
 }
 
 /* ========================
-   Container
+   Container Principal
 ======================== */
 
+/* Container que engloba o formulário e a imagem */
 .container {
-  width: 80%;
-  height: 80vh;
-  display: flex;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-  border-radius: 10px;
+  width: 80%; /* Largura do container */
+  height: 80vh; /* Altura do container */
+  display: flex; /* Flexbox para alinhar imagem e formulário lado a lado */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); /* Sombra ao redor do container */
+  border-radius: 10px; /* Borda arredondada */
 }
 
 /* ========================
-   Imagem
+   Seção de Imagem
 ======================== */
 
+/* Estiliza a área da imagem no lado esquerdo */
 .form-image {
-  width: 50%;
-  display: flex;
+  width: 50%; /* Metade do container */
+  display: flex; /* Centraliza a imagem */
   justify-content: center;
   align-items: center;
-  background-color: #fde3a7d7;
-  padding: 1rem;
-  border-radius: 10px;
+  background-color: #fde3a7d7; /* Fundo amarelo claro */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 10px; /* Borda arredondada */
 }
 
+/* Define o tamanho da imagem */
 .form-image img {
-  width: 31rem;
+  width: 31rem; /* Largura específica da imagem */
 }
 
 /* ========================
-   Formulário
+   Seção de Formulário
 ======================== */
 
+/* Estiliza a área do formulário no lado direito */
 .form {
-  width: 50%;
+  width: 50%; /* Metade do container */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 3rem;
-  border-radius: 10px;
+  flex-direction: column; /* Alinha o conteúdo em coluna */
+  background-color: #fff; /* Fundo branco */
+  padding: 3rem; /* Espaçamento interno */
+  border-radius: 10px; /* Borda arredondada */
 }
 
+/* ========================
+   Cabeçalho do Formulário
+======================== */
+
+/* Alinhamento do título do formulário */
 .form-header {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Alinha verticalmente ao centro */
+  align-items: center; /* Centraliza o cabeçalho */
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 3rem; /* Espaçamento inferior */
 }
 
+/* Título do formulário */
 .title {
-  text-align: center;
-  position: relative; /* Necessário para o pseudo-elemento ::after */
+  text-align: center; /* Centraliza o texto */
+  position: relative; /* Necessário para o efeito do pseudo-elemento ::after */
 }
 
+/* Linha decorativa abaixo do título */
 .title h1::after {
   content: "";
   display: block;
   width: 5rem;
   height: 0.3rem;
-  background-color: #6c63ff;
+  background-color: #6c63ff; /* Cor roxa */
   margin: 0 auto;
   position: absolute;
-  bottom: -0.5rem;
+  bottom: -0.5rem; /* Posiciona a linha abaixo do título */
 }
 
+/* ========================
+   Botão de Login
+======================== */
 
+/* Estilo do botão de login */
 .login-button {
-  margin-top: 2.5rem;
+  margin-top: 2.5rem; /* Espaçamento superior */
 }
 
+/* Botão com cor e estilo */
 .login-button button {
-  width: 100%;
-  border: none;
-  background-color: #6c63ff;
-  padding: 0.6rem;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 0.93rem;
-  font-weight: 500;
-  color: #fff;
+  width: 100%; /* Ocupa toda a largura */
+  border: none; /* Remove borda */
+  background-color: #6c63ff; /* Cor de fundo roxa */
+  padding: 0.6rem; /* Espaçamento interno */
+  cursor: pointer; /* Estilo de cursor */
+  font-size: 0.93rem; /* Tamanho da fonte */
+  font-weight: 500; /* Peso da fonte */
+  color: #fff; /* Cor do texto */
 }
 
+/* Efeito hover no botão */
 .login-button button:hover {
-  background-color: #6b63ff;
+  background-color: #6b63ff; /* Cor de fundo ao passar o mouse */
 }
 
 /* ========================
    Inputs
 ======================== */
 
+/* Agrupamento dos inputs */
 .input-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Alinha inputs em coluna */
   width: 100%;
 }
 
+/* Estilo da caixa de input */
 .input-box {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 1.1rem;
+  flex-direction: column; /* Alinha label e input em coluna */
+  margin-bottom: 1.1rem; /* Espaçamento entre inputs */
 }
 
+/* Estiliza os campos de texto (input) */
 .input-box input {
-  margin: 0.6rem 0;
-  padding: 0.8rem 1.2rem;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px #0000001c;
+  margin: 0.6rem 0; /* Espaçamento vertical */
+  padding: 0.8rem 1.2rem; /* Espaçamento interno */
+  border: none; /* Remove bordas */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 1px 1px 6px #0000001c; /* Sombra leve */
 }
 
+/* Efeito hover nos inputs */
 .input-box input:hover {
-  background-color: #eeeeee75;
+  background-color: #eeeeee75; /* Fundo ao passar o mouse */
 }
 
+/* Estilo ao focar no input */
 .input-box input:focus-visible {
-  outline: 1px solid #6c63ff;
+  outline: 1px solid #6c63ff; /* Borda roxa ao focar */
 }
 
+/* Estilo das labels */
 .input-box label {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #000000c0;
+  color: #000000c0; /* Cor escura */
 }
 
+/* Placeholder estilizado */
 .input-box input::placeholder {
-  color: #000000be;
-}
-
-.forgot-password {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.forgot-password a {
-  color: #6c63ff;
-  text-decoration: none;
-}
-
-.forgot-password a:hover {
-  text-decoration: underline;
+  color: #000000be; /* Cor do texto placeholder */
 }
 
 /* ========================
-   Estilos da Mensagem de Registro
+   Links de Esqueci a Senha e Registro
 ======================== */
+
+/* Esqueci a senha */
+.forgot-password {
+  margin-top: 1rem; /* Espaçamento superior */
+  text-align: center;
+}
+
+/* Link de "Esqueci minha senha" */
+.forgot-password a {
+  color: #6c63ff; /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Efeito hover no link */
+.forgot-password a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Mensagem de registro */
 .register-message {
   margin-top: 1.5rem;
   text-align: center;
 }
 
+/* Estilo do texto de registro */
 .register-message p {
-  font-size: 0.9rem;
-  color: #333;
+  font-size: 0.9rem; /* Tamanho do texto */
+  color: #333; /* Cor do texto */
 }
 
+/* Estilo do link de registro */
 .register-message a {
-  color: #6c63ff;
+  color: #6c63ff; /* Cor do link */
   text-decoration: none;
-  font-weight: bold;
+  font-weight: bold; /* Negrito */
 }
 
+/* Efeito hover no link de registro */
 .register-message a:hover {
   text-decoration: underline;
 }
@@ -193,31 +226,33 @@ body {
    Responsividade
 ======================== */
 
+/* Para telas menores que 1330px de largura */
 @media screen and (max-width: 1330px) {
   .form-image {
-    display: none;
+    display: none; /* Remove a imagem */
   }
 
   .container {
-    width: 50%;
+    width: 50%; /* Diminui a largura do container */
   }
 
   .form {
-    width: 100%;
+    width: 100%; /* O formulário ocupa toda a largura */
   }
 }
 
+/* Para telas menores que 1064px de largura */
 @media screen and (max-width: 1064px) {
   .container {
-    width: 90%;
-    height: auto;
+    width: 90%; /* Largura maior para telas menores */
+    height: auto; /* Altura ajustável */
   }
 
+  /* Ajustes na rolagem dos inputs */
   .input-group {
     flex-direction: column;
     overflow-y: scroll;
-    flex-wrap: nowrap;
-    max-height: 10rem;
-    padding-right: 5rem;
+    max-height: 10rem; /* Limita a altura do grupo de inputs */
+    padding-right: 5rem; /* Espaço para evitar sobreposição */
   }
 }
