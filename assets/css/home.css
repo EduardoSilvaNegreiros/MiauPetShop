@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap"); /* Importa a fonte Nerko One */
 
 /* Estilos Gerais */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nerko One", sans-serif;
+  font-family: "Nerko One", sans-serif; /* Define a fonte principal */
 }
 
 body {
@@ -20,87 +20,87 @@ body {
 /* Container */
 .container {
   width: 80%;
-  max-height: 600px; /* Altura máxima do container */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-  background-color: #fff;
-  padding: 2rem; /* Ajustado para um padding mais uniforme */
-  border-radius: 10px;
-  overflow-y: auto; /* Permite rolagem vertical caso o conteúdo exceda a altura */
+  max-height: 600px; /* Limita a altura máxima do container */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212); /* Sombra ao redor */
+  background-color: #fff; /* Fundo branco */
+  padding: 2rem; /* Padding uniforme */
+  border-radius: 10px; /* Borda arredondada */
+  overflow-y: auto; /* Permite rolagem vertical quando o conteúdo excede a altura */
 }
 
 /* Header geral */
 .header {
   display: flex;
   justify-content: center;
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza o conteúdo */
   margin-bottom: 2rem;
-  width: 100%; /* Garante que o cabeçalho ocupe a largura total do container */
-  position: relative; /* Mantém o cabeçalho dentro do container */
+  width: 100%;
+  position: relative; /* Mantém o cabeçalho posicionado corretamente */
 }
 
 .header h1 {
   font-size: 2rem;
-  color: #6c63ff; /* Cor principal */
+  color: #6c63ff; /* Cor do título */
   text-align: center; /* Centraliza o texto */
 }
 
+/* Cabeçalho de formulário */
 .form-header {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem; /* Espaçamento inferior */
-  width: 100%; /* Garante que o cabeçalho ocupe a largura total do container */
+  width: 100%;
 }
 
 /* Grupo de inputs */
 .input-group {
   display: flex;
-  flex-direction: column; /* Alinha os inputs em coluna */
-  gap: 1rem; /* Espaçamento entre os inputs */
-  width: 100%; /* Ocupa toda a largura do formulário */
+  flex-direction: column; /* Inputs dispostos em coluna */
+  gap: 1rem; /* Espaçamento entre inputs */
+  width: 100%;
 }
 
 /* Estilos para os inputs */
 .input-box {
   display: flex;
   flex-direction: column;
-  width: 100%; /* Garante que as caixas ocupem toda a largura */
+  width: 100%; /* Largura total */
 }
 
-/* Estilos para os inputs de texto */
 .input-box input,
 .input-box select {
-  width: 100%; /* Garante que os inputs ocupem toda a largura da input-box */
+  width: 100%; /* Inputs ocupam toda a largura */
   padding: 1rem;
-  border: 1px solid #ddd; /* Adicionando borda */
-  border-radius: 10px;
-  box-shadow: 1px 1px 6px #0000001c;
-  font-size: 1rem; /* Aumenta o tamanho da fonte para melhor legibilidade */
-  transition: background-color 0.3s ease, border 0.3s ease; /* Transição suave */
+  border: 1px solid #ddd; /* Borda leve */
+  border-radius: 10px; /* Borda arredondada */
+  box-shadow: 1px 1px 6px #0000001c; /* Sombra sutil */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: background-color 0.3s ease, border 0.3s ease; /* Transição suave para hover e foco */
 }
 
 .input-box input:hover,
 .input-box select:hover {
-  background-color: #eeeeee75;
+  background-color: #eeeeee75; /* Cor ao passar o mouse */
 }
 
 .input-box input:focus,
 .input-box select:focus {
   outline: 1px solid #6c63ff; /* Destaque ao focar */
-  background-color: #e6e6fa; /* Mudança no fundo ao focar */
+  background-color: #e6e6fa; /* Cor de fundo ao focar */
 }
 
 /* Links de navegação */
 .nav-group {
-  position: absolute; /* Permite posicionar os links à direita */
-  right: 0; /* Alinha à direita */
-  display: flex; /* Mantém os links em linha */
+  position: absolute; /* Posiciona os links no canto direito */
+  right: 0;
+  display: flex;
 }
 
 .nav-link {
   background-color: #6c63ff; /* Cor do link */
-  color: #fff;
-  padding: 10px 15px; /* Espaçamento interno do link */
+  color: #fff; /* Cor do texto */
+  padding: 10px 15px;
   border-radius: 5px;
   text-decoration: none; /* Remove sublinhado */
 }
@@ -110,7 +110,7 @@ body {
 }
 
 .nav-link:focus {
-  outline: 2px dashed #6c63ff; /* Um destaque visível para o foco */
+  outline: 2px dashed #6c63ff; /* Destaque ao focar */
 }
 
 /* Estilos Para Tabelas */
@@ -123,41 +123,40 @@ body {
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Remove espaçamento entre células */
   margin: 1rem 0;
 }
 
 /* Estilo para células da tabela */
 th,
 td {
-  padding: 10px; /* Aumenta o padding para mais espaço */
-  border: 1px solid #ddd;
-  text-align: center;
+  padding: 10px; /* Aumenta o espaço dentro das células */
+  border: 1px solid #ddd; /* Borda fina */
+  text-align: center; /* Centraliza o texto */
 }
 
 /* Estilo para o cabeçalho da tabela */
 th {
   background-color: #6c63ff; /* Cor do cabeçalho */
-  color: #fff;
+  color: #fff; /* Texto branco */
 }
 
-/* Estilo para linhas alternadas */
+/* Linhas alternadas */
 tr:nth-child(even) {
-  background-color: #f2f2f2; /* Cor das linhas alternadas */
+  background-color: #f2f2f2; /* Cor para linhas alternadas */
 }
 
-/* Estilo do botão Adicionar */
+/* Botão Adicionar */
 .button-add {
   background-color: #6c63ff; /* Cor do botão */
-  color: #fff;
-  padding: 10px 20px; /* Espaçamento interno do botão */
-  border-radius: 5px;
+  color: #fff; /* Texto branco */
+  padding: 10px 20px;
+  border-radius: 5px; /* Borda arredondada */
   font-size: 15px;
-  text-decoration: none;
   cursor: pointer;
   border: none; /* Remove a borda padrão */
-  margin-top: 1rem; /* Espaçamento acima do botão */
-  transition: background-color 0.3s ease; /* Transição suave */
+  margin-top: 1rem;
+  transition: background-color 0.3s ease; /* Transição suave para hover */
 }
 
 .button-add:hover {
