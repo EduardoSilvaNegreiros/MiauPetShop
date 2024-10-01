@@ -19,11 +19,13 @@
     dataNascCliente, 
     cpfCliente, 
     sexoCliente, 
-    telefoneCliente) 
+    telefoneCliente
+    ) 
     VALUES 
     ('$nomeCliente', 
     '$emailCliente', 
     '$dataNascCliente', 
     '$cpfCliente', '$sexoCliente',
-     '$telefoneCliente')";
+     '$telefoneCliente'
+     )";
 ?>
