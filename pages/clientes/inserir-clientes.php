@@ -19,15 +19,17 @@ $sql = "INSERT INTO tbclientes (
     dataNascCliente, 
     cpfCliente, 
     sexoCliente, 
-    telefoneCliente
-    ) 
-    VALUES 
-    (
+    telefoneCliente) 
+    VALUES (
     '{$nomeCliente}',
     '{$emailCliente}',
     '{$dataNascCliente}',
     '{$cpfCliente}',
     '{$sexoCliente}',
     '{$telefoneCliente}',
-    )";
+    )
+    ";
+    
+    // Executa a instrução SQL
+    $rs = mysqli_query($conexao, $sql) or die ("Erro ao executar a consulta!" . mysqli_error($conexao));
 ?>
