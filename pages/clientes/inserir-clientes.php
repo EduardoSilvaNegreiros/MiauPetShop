@@ -14,21 +14,20 @@ $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]
 
 // Inserção na tabela tbClientes
 $sql = "INSERT INTO tbclientes (
-    cpfCliente,
-    dataNascCliente,
-    emailCliente,
     nomeCliente,
+    emailCliente,
+    telefoneCliente,
     sexoCliente,
-    telefoneCliente) 
+    dataNascCliente,
+    cpfCliente)
     VALUES(
-    '{$cpfCliente}',
-    '{$dataNascCliente}',
-    '{$emailCliente}',
     '{$nomeCliente}',
-    '{$sexoCliente}',
+    '{$emailCliente}',
     '{$telefoneCliente}',
-    )
-    ";
+    '{$sexoCliente}',
+    '{$dataNascCliente}',
+    '{$cpfCliente}'
+    )";
 
 // Executa a instrução SQL
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
