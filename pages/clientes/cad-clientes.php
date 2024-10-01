@@ -2,7 +2,7 @@
     <h3>Cadastro de Contato</h3> <!-- Título do formulário -->
 </header>
 
-<form action="" method="post" class="form">
+<form action="index.php?menuop=inserir-cliente" method="post" class="form">
     <!-- Início do formulário -->
     <div class="input-group">
         <!-- Grupo de inputs -->

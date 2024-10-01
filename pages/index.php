@@ -36,24 +36,31 @@ include("../database/conexao.php");
                     case 'funcionarios':
                         include("funcionarios/funcionarios.php");
                         break;
+                        
                     case 'cad-funcionarios':
                         include("funcionarios/cad-funcionarios.php");
                         break;
+
                     case 'clientes':
                         include("clientes/clientes.php");
                         break;
+
                     case 'cad-clientes':
                         include("clientes/cad-clientes.php");
                         break;
+                        
                     case 'servicos':
                         include("servicos.php");
                         break;
+                        
                     case 'pets':
                         include("pets/pets.php");
                         break;
+                        
                     case 'cad-pets':
                         include("../pages/pets/cad-pets.php");
                         break;
+                        
                     default:
                         include("funcionarios/funcionarios.php");
                         break;
