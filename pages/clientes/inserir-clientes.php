@@ -27,8 +27,7 @@ $sql = "INSERT INTO tbclientes (
     '{$cpfCliente}',
     '{$sexoCliente}',
     '{$telefoneCliente}',
-    )
-    ";
+    )";
 
 // Executa a instrução SQL
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao));
