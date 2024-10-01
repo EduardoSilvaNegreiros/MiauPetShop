@@ -11,5 +11,19 @@
     $sexoCliente = mysqli_real_escape_string($conexao, $_POST["sexoCliente"]);
     $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]);
     
-    $sql = 
+
+    // Inserção na tabela tbClientes
+    $sql = "INSERT INTO tbclientes (
+    nomeCliente, 
+    emailCliente, 
+    dataNascCliente, 
+    cpfCliente, 
+    sexoCliente, 
+    telefoneCliente) 
+    VALUES 
+    ('$nomeCliente', 
+    '$emailCliente', 
+    '$dataNascCliente', 
+    '$cpfCliente', '$sexoCliente',
+     '$telefoneCliente')";
 ?>
