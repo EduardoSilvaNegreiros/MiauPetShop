@@ -22,11 +22,12 @@ $sql = "INSERT INTO tbclientes (
     telefoneCliente
     ) 
     VALUES 
-    ('$nomeCliente', 
-    '$emailCliente', 
-    '$dataNascCliente', 
-    '$cpfCliente', 
-    '$sexoCliente',
-    '$telefoneCliente'
-     )";
+    (
+    '{$nomeCliente}',
+    '{$emailCliente}',
+    '{$dataNascCliente}',
+    '{$cpfCliente}',
+    '{$sexoCliente}',
+    '{$telefoneCliente}',
+    )";
 ?>
