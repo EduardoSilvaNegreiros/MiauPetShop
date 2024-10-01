@@ -3,8 +3,10 @@
 </header>
 
 <form action="index.php?menuop=inserir-clientes" method="post" class="form">
+
     <!-- Início do formulário -->
     <div class="input-group">
+
         <!-- Grupo de inputs -->
         <div class="input-box">
 
