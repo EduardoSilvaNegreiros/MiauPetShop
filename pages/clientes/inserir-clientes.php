@@ -17,7 +17,7 @@ $dataNascCliente = mysqli_real_escape_string($conexao, $_POST["dataNascCliente"]
 $cpfCliente = mysqli_real_escape_string($conexao, $_POST["cpfCliente"]); // CPF do cliente
 $sexoCliente = mysqli_real_escape_string($conexao, $_POST["sexoCliente"]); // Sexo do cliente
 $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]); // Telefone do cliente
-$enderecoCliente = mysqli_real_escape_string($conexao, $_POST["endercoCliente"]); // Endereço do cliente
+$enderecoCliente = mysqli_real_escape_string($conexao, $_POST["enderecoCliente"]); // Endereço do cliente
 
 // Constrói a instrução SQL para inserir os dados na tabela tbClientes
 $sql = "INSERT INTO tbclientes (
