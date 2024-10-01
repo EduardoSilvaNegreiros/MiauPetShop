@@ -27,6 +27,11 @@
             </div>
 
             <div class="input-box">
+                <label for="enderecoCliente">Endereço</label>
+                <input type="text" name="enderecoCliente" id="enderecoCliente" required> <!-- Campo para telefone -->
+            </div>
+
+            <div class="input-box">
                 <label for="sexoCliente">Sexo</label>
                 <input type="text" name="sexoCliente" id="sexoCliente">
             </div>

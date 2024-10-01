@@ -3,7 +3,7 @@
 </header>
 
 <?php
-// Seleção dos campos do formulário
+// Seleção dos campos do formulário, usando 'mysqli_real_escape_string' para prevenir SQLInjection
 $nomeCliente = mysqli_real_escape_string($conexao, $_POST["nomeCliente"]);
 $emailCliente = mysqli_real_escape_string($conexao, $_POST["emailCliente"]);
 $dataNascCliente = mysqli_real_escape_string($conexao, $_POST["dataNascCliente"]);

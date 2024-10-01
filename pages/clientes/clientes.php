@@ -14,6 +14,7 @@
             <th>Nome</th>
             <th>E-mail</th>
             <th>Telefone</th>
+            <th>Endereço</th>
             <th>Sexo</th>
             <th>Data de Nasc.</th>
             <th>CPF</th>
@@ -32,6 +33,7 @@
             <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
             <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
             <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
+            <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
             <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
             <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
             <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
