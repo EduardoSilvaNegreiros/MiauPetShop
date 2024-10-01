@@ -32,5 +32,6 @@ $sql = "INSERT INTO tbclientes (
 // Executa a instrução SQL
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
 
+// Caso ocorra tudo corretamente, aparecera está msg de sucesso
 echo "O registro foi inserido com sucesso!";
 ?>
