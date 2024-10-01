@@ -29,7 +29,7 @@ $sql = "INSERT INTO tbclientes (
     '{$telefoneCliente}',
     )
     ";
-    
-    // Executa a instrução SQL
-    $rs = mysqli_query($conexao, $sql) or die ("Erro ao executar a consulta!" . mysqli_error($conexao));
+
+// Executa a instrução SQL
+mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao));
 ?>
