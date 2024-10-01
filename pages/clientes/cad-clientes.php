@@ -1,6 +1,7 @@
 <header class="form-header">
     <h3>Cadastro de Contato</h3> <!-- Título do formulário -->
 </header>
+
 <form action="" method="post" class="form">
     <!-- Início do formulário -->
     <div class="input-group">
@@ -28,13 +29,7 @@
 
         <div class="input-box">
             <label for="sexoCliente">Sexo</label>
-            <select name="sexoCliente" id="sexoCliente" required>
-                <!-- Seleção de sexo -->
-                <option value="" disabled selected>Selecione</option>
-                <option value="masculino">Masculino</option>
-                <option value="feminino">Feminino</option>
-                <option value="outro">Outro</option>
-            </select>
+            <input type="text" name="sexoCliente" id="sexoCliente">
         </div>
 
         <div class="input-box">
