@@ -31,7 +31,7 @@ body {
 /* Header geral */
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; /* Centraliza o conteúdo */
   margin-bottom: 2rem;
   width: 100%;
