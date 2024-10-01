@@ -10,6 +10,7 @@ $dataNascCliente = mysqli_real_escape_string($conexao, $_POST["dataNascCliente"]
 $cpfCliente = mysqli_real_escape_string($conexao, $_POST["cpfCliente"]);
 $sexoCliente = mysqli_real_escape_string($conexao, $_POST["sexoCliente"]);
 $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]);
+$enderecoCliente = mysqli_real_escape_string($conexao, $_POST["endercoCliente"]);
 
 
 // Inserção na tabela tbClientes
@@ -17,6 +18,7 @@ $sql = "INSERT INTO tbclientes (
     nomeCliente,
     emailCliente,
     telefoneCliente,
+    enderecoCliente,
     sexoCliente,
     dataNascCliente,
     cpfCliente)
@@ -24,6 +26,7 @@ $sql = "INSERT INTO tbclientes (
     '{$nomeCliente}',
     '{$emailCliente}',
     '{$telefoneCliente}',
+    '{$enderecoCliente}',
     '{$sexoCliente}',
     '{$dataNascCliente}',
     '{$cpfCliente}'
