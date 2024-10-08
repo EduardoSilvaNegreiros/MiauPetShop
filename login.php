@@ -28,6 +28,15 @@
                     </div>
                 </div>
 
+                <!-- Mensagem flash para o cadastro -->
+                <?php
+                session_start(); // Inicia a sessão
+                if (isset($_SESSION['success_message'])) {
+                    echo '<div class="flash-message">' . $_SESSION['success_message'] . '</div>';
+                    unset($_SESSION['success_message']); // Remove a mensagem após exibir
+                }
+                ?>
+
                 <!-- Campos de e-mail e senha -->
                 <div class="input-group">
                     <div class="input-box">
