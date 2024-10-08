@@ -1,54 +1,53 @@
-<header>
-    <h3>Funcionários</h3> <!-- Título da seção -->
+<header class="form-header">
+    <h3>Cadastro de Funcionário</h3> <!-- Título do formulário -->
 </header>
 
-<div>
-    <a href="index.php?menuop=cad-funcionarios">Novo Funcionário</a> <!-- Link para cadastro de novo funcionário -->
-</div>
+<form action="index.php?menuop=inserir-funcionarios" method="POST" class="form">
 
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Telefone</th>
-            <th>Cargo</th>
-            <th>Data de Contratação</th>
-            <th>Salário</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-      
-        <?php
-        $sql = "SELECT
-            idFuncionario,
-            upper(nomeFuncionario) AS nomeFuncionario,
-            lower(emailFuncionario) AS emailFuncionario,
-            telefoneFuncionario,
-            cargoFuncionario,
-            DATE_FORMAT(dataContratacao, '%d/%m/%Y') AS dataContratacao,
-            salarioFuncionario,
-            statusFuncionario
-        FROM Funcionarios;";
+    <!-- Início do formulário -->
+    <div class="input-group">
 
-        $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
+        <!-- Grupo de inputs -->
+        <div class="input-box">
 
-        while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
-        ?>
-            <tr>
-                <td><?php echo $dados["idFuncionario"] ?></td> <!-- ID do funcionário -->
-                <td><?php echo $dados["nomeFuncionario"] ?></td> <!-- Nome do funcionário -->
-                <td><?php echo $dados["emailFuncionario"] ?></td> <!-- E-mail do funcionário -->
-                <td><?php echo $dados["telefoneFuncionario"] ?></td> <!-- Telefone do funcionário -->
-                <td><?php echo $dados["cargoFuncionario"] ?></td> <!-- Cargo do funcionário -->
-                <td><?php echo $dados["dataContratacao"] ?></td> <!-- Data de contratação do funcionário -->
-                <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td> <!-- Salário do funcionário formatado -->
-                <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
-            </tr>
-        <?php
-        } // Fim do loop
-        ?>
-    </tbody>
-</table>
+            <div class="input-box">
+                <label for="nomeFuncionario">Nome</label>
+                <input type="text" name="nomeFuncionario" id="nomeFuncionario" required> <!-- Campo para nome -->
+            </div>
+
+            <div class="input-box">
+                <label for="emailFuncionario">E-mail</label>
+                <input type="email" name="emailFuncionario" id="emailFuncionario" required> <!-- Campo para e-mail -->
+            </div>
+
+            <div class="input-box">
+                <label for="telefoneFuncionario">Telefone</label>
+                <input type="text" name="telefoneFuncionario" id="telefoneFuncionario" required> <!-- Campo para telefone -->
+            </div>
+
+            <div class="input-box">
+                <label for="cargoFuncionario">Cargo</label>
+                <input type="text" name="cargoFuncionario" id="cargoFuncionario" required> <!-- Campo para cargo -->
+            </div>
+
+            <div class="input-box">
+                <label for="dataContratacao">Data de Contratação</label>
+                <input type="date" name="dataContratacao" id="dataContratacao" required> <!-- Campo para data de contratação -->
+            </div>
+
+            <div class="input-box">
+                <label for="salarioFuncionario">Salário</label>
+                <input type="text" name="salarioFuncionario" id="salarioFuncionario" required> <!-- Campo para salário -->
+            </div>
+
+            <div class="input-box">
+                <label for="statusFuncionario">Status</label>
+                <input type="text" name="statusFuncionario" id="statusFuncionario" required> <!-- Campo para status -->
+            </div>
+        </div>
+
+        <div>
+            <input type="submit" value="Adicionar" name="btnAdicionar" class="button-add"> <!-- Botão de envio -->
+        </div>
+    </div>
+</form>
