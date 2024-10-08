@@ -35,6 +35,12 @@
                     echo '<div class="flash-message">' . $_SESSION['success_message'] . '</div>';
                     unset($_SESSION['success_message']); // Remove a mensagem após exibir
                 }
+
+                // Mensagem de erro
+                if (isset($_SESSION['error_message'])) {
+                    echo '<div class="flash-message" style="color: red;">' . $_SESSION['error_message'] . '</div>';
+                    unset($_SESSION['error_message']); // Remove a mensagem após exibir
+                }
                 ?>
 
                 <!-- Campos de e-mail e senha -->
