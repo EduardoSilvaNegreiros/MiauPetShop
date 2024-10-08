@@ -19,7 +19,7 @@
 
         <!-- Formulário de cadastro -->
         <div class="form">
-            <form action="#" method="POST">
+            <form action="process/process_register.php" method="POST">
 
                 <!-- Cabeçalho com título e botões de navegação -->
                 <div class="form-header">
@@ -37,14 +37,14 @@
                 <!-- Grupo de inputs para cadastro -->
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="firstname">Primeiro Nome</label>
-                        <input type="text" name="firstname" id="firstname" placeholder="Digite seu primeiro nome"
+                        <label for="primeiroNome">Primeiro Nome</label>
+                        <input type="text" name="primeiroNome" id="primeiroNome" placeholder="Digite seu primeiro nome"
                             required />
                     </div>
 
                     <div class="input-box">
-                        <label for="lastname">Sobrenome</label>
-                        <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome" required />
+                        <label for="segundoNome">Sobrenome</label>
+                        <input type="text" name="segundoNome" id="segundoNome" placeholder="Digite seu sobrenome" required />
                     </div>
 
                     <div class="input-box">
@@ -53,18 +53,18 @@
                     </div>
 
                     <div class="input-box">
-                        <label for="cell">Celular</label>
-                        <input type="tel" name="cell" id="cell" placeholder="(xx) xxxx-xxxx" required />
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx" required />
                     </div>
 
                     <div class="input-box">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
+                        <label for="senha">Senha</label>
+                        <input type="senha" name="senha" id="senha" placeholder="Digite sua senha" required />
                     </div>
 
                     <div class="input-box">
-                        <label for="confirmPassword">Confirme sua senha</label>
-                        <input type="password" name="confirmPassword" id="confirmPassword"
+                        <label for="confirmarSenha">confirme sua senha</label>
+                        <input type="senha" name="confirmarSenha" id="confirmarSenha"
                             placeholder="Digite sua senha novamente" required />
                     </div>
 
@@ -77,23 +77,23 @@
                         <!-- Opções de gênero -->
                         <div class="gender-group">
                             <div class="gender-input">
-                                <input type="radio" name="gender" id="female" value="Feminino" />
-                                <label for="female">Feminino</label>
+                                <input type="radio" name="gender" id="feminino" value="Feminino" />
+                                <label for="feminino">Feminino</label>
                             </div>
 
                             <div class="gender-input">
-                                <input type="radio" name="gender" id="male" value="Masculino" />
-                                <label for="male">Masculino</label>
+                                <input type="radio" name="gender" id="masculino" value="Masculino" />
+                                <label for="masculino">Masculino</label>
                             </div>
 
                             <div class="gender-input">
-                                <input type="radio" name="gender" id="others" value="Outros" />
-                                <label for="others">Outros</label>
+                                <input type="radio" name="gender" id="outros" value="Outros" />
+                                <label for="outros">Outros</label>
                             </div>
 
                             <div class="gender-input">
-                                <input type="radio" name="gender" id="none" value="Prefiro não dizer" />
-                                <label for="none">Prefiro não dizer</label>
+                                <input type="radio" name="gender" id="naoDizer" value="Prefiro não dizer" />
+                                <label for="naoDizer">Prefiro não dizer</label>
                             </div>
                         </div>
 
