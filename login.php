@@ -28,18 +28,20 @@
                     </div>
                 </div>
 
-                <!-- Mensagem flash para o cadastro -->
+                <!-- Exibir mensagens de erro ou sucesso -->
                 <?php
                 session_start(); // Inicia a sessão
-                if (isset($_SESSION['success_message'])) {
-                    echo '<div class="flash-message">' . $_SESSION['success_message'] . '</div>';
-                    unset($_SESSION['success_message']); // Remove a mensagem após exibir
+
+                // Exibir mensagens de erro
+                if (isset($_SESSION['mensagem_erro'])) {
+                    echo '<div class="alert alert-danger">' . $_SESSION['mensagem_erro'] . '</div>';
+                    unset($_SESSION['mensagem_erro']); // Limpa a mensagem após exibi-la
                 }
 
-                // Mensagem de erro
-                if (isset($_SESSION['error_message'])) {
-                    echo '<div class="flash-message" style="color: red;">' . $_SESSION['error_message'] . '</div>';
-                    unset($_SESSION['error_message']); // Remove a mensagem após exibir
+                // Exibir mensagens de sucesso
+                if (isset($_SESSION['mensagem_sucesso'])) {
+                    echo '<div class="alert alert-success">' . $_SESSION['mensagem_sucesso'] . '</div>';
+                    unset($_SESSION['mensagem_sucesso']); // Limpa a mensagem após exibi-la
                 }
                 ?>
 

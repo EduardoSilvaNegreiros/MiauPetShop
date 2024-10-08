@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica se os campos estão vazios
     if (empty($email) || empty($senha)) {
-        $_SESSION['error_message'] = "E-mail e senha são obrigatórios!";
+        $_SESSION['mensagem_erro'] = "E-mail e senha são obrigatórios!";
         header("Location: ../login.php");
         exit();
     }
@@ -33,15 +33,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($senha, $usuario['senha'])) {
             $_SESSION['user_id'] = $usuario['id']; // Armazena o ID do usuário
             $_SESSION['user_name'] = $usuario['primeiroNome']; // Armazena o nome do usuário
+            $_SESSION['mensagem_sucesso'] = "Login realizado com sucesso."; // Mensagem de sucesso
             header("Location: ../pages/index.php");
             exit();
         } else {
-            $_SESSION['error_message'] = "Senha incorreta!";
+            $_SESSION['mensagem_erro'] = "Senha incorreta!";
             header("Location: ../login.php");
             exit();
         }
     } else {
-        $_SESSION['error_message'] = "E-mail incorreto!";
+        $_SESSION['mensagem_erro'] = "E-mail incorreto!";
         header("Location: ../login.php");
         exit();
     }

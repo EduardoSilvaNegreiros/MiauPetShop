@@ -34,6 +34,23 @@
                     </div>
                 </div>
 
+                <!-- Exibir mensagens de erro ou sucesso -->
+                <?php
+                session_start(); // Inicia a sessão
+
+                // Exibir mensagens de erro
+                if (isset($_SESSION['mensagem_erro'])) {
+                    echo '<div class="alert alert-danger">' . $_SESSION['mensagem_erro'] . '</div>';
+                    unset($_SESSION['mensagem_erro']); // Limpa a mensagem após exibi-la
+                }
+
+                // Exibir mensagens de sucesso
+                if (isset($_SESSION['mensagem_sucesso'])) {
+                    echo '<div class="alert alert-success">' . $_SESSION['mensagem_sucesso'] . '</div>';
+                    unset($_SESSION['mensagem_sucesso']); // Limpa a mensagem após exibi-la
+                }
+                ?>
+
                 <!-- Grupo de inputs para cadastro -->
                 <div class="input-group">
                     <div class="input-box">

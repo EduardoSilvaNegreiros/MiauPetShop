@@ -18,8 +18,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Verifica se a senha e a confirmação são iguais
     if ($senha !== $confirmarSenha) {
-        echo "As senhas não coincidem!";
-        exit;
+        $_SESSION['mensagem_erro'] = "As senhas não coincidem!"; // Mensagem flash para senhas diferentes
+        header("Location: ../register.php"); // Redireciona de volta para a página de registro
+        exit();
     }
 
     // Criptografar a senha
@@ -34,11 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt->execute()) {
         // Mensagem de sucesso
-        $_SESSION['success_message'] = "Cadastro realizado com sucesso! Faça login para seguir.";
+        $_SESSION['mensagem_sucesso'] = "Cadastro realizado com sucesso! Faça login para seguir."; // Mensagem de sucesso
         header("Location: ../login.php"); // Redireciona para a página de login
         exit();
     } else {
-        echo "Erro: " . $stmt->error;
+        $_SESSION['mensagem_erro'] = "Erro ao cadastrar! Tente novamente."; // Mensagem de erro
+        header("Location: ../register.php"); // Redireciona de volta para a página de registro
+        exit();
     }
 
     // Fechar a conexão
