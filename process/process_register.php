@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
     $confirmarSenha = $_POST['confirmarSenha'];
-    $genero = $_POST['genero'];
+    $genero = $_POST['gender']; // Certifique-se que o campo no formulário seja 'gender'
 
     // Verifica se a senha e a confirmação são iguais
     if ($senha !== $confirmarSenha) {
@@ -24,20 +24,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 
     // SQL para inserir dados no banco de dados
-    $sql = "INSERT INTO usuarios (primeiro_nome, sobrenome, email, telefone, senha, genero) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO usuarios (primeiroNome, segundoNome, email, telefone, senha, genero) VALUES (?, ?, ?, ?, ?, ?)";
     
     // Preparar e executar a consulta
-    $stmt = $conexao->prepare($sql);
-    $stmt->bind_param("ssssss", $primeiro_nome, $sobrenome, $email, $telefone, $senhaCriptografada, $genero);
+    if ($stmt = $conexao->prepare($sql)) {
+        $stmt->bind_param("ssssss", $primeiro_nome, $sobrenome, $email, $telefone, $senhaCriptografada, $genero);
+        
+        // Executar a consulta
+        if ($stmt->execute()) {
+            echo "Cadastro realizado com sucesso!";
+        } else {
+            echo "Erro ao cadastrar: " . $stmt->error;
+        }
 
-    if ($stmt->execute()) {
-        echo "Cadastro realizado com sucesso!";
+        // Fechar a conexão
+        $stmt->close();
     } else {
-        echo "Erro: " . $stmt->error;
+        echo "Erro ao preparar a consulta: " . $conexao->error;
     }
 
     // Fechar a conexão
-    $stmt->close();
     $conexao->close();
 } else {
     echo "Método de requisição inválido.";
