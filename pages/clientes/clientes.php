@@ -22,22 +22,34 @@
     </thead>
     <tbody>
         <?php
-        $sql = "SELECT * FROM tbclientes"; // Consulta SQL para selecionar todos os clientes
+        $sql = "SELECT
+idCliente,
+upper(nomeCliente) AS nomeCliente,
+lower(emailCliente) AS emailCliente,
+telefoneCliente,
+upper(enderecoCliente) AS enderecoCliente,
+CASE 
+	WHEN sexoCliente = 'F' THEN 'FEMININO'
+    WHEN sexoCliente = 'M' THEN 'MASCULINO'
+ELSE 
+    'OUTRO'    
+END AS sexoCliente
+FROM tbclientes;"; 
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 
         while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
         ?>
-        <tr>
-            <td><?php echo $dados["idCliente"] ?></td> <!-- ID do cliente -->
-            <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
-            <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
-            <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
-            <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
-            <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
-            <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
-            <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
-        </tr>
+            <tr>
+                <td><?php echo $dados["idCliente"] ?></td> <!-- ID do cliente -->
+                <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
+                <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
+                <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
+                <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
+                <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
+                <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
+                <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
+            </tr>
         <?php
         } // Fim do loop
         ?>
