@@ -23,18 +23,19 @@
     <tbody>
         <?php
         $sql = "SELECT
-idCliente,
-upper(nomeCliente) AS nomeCliente,
-lower(emailCliente) AS emailCliente,
-telefoneCliente,
-upper(enderecoCliente) AS enderecoCliente,
-CASE 
-	WHEN sexoCliente = 'F' THEN 'FEMININO'
-    WHEN sexoCliente = 'M' THEN 'MASCULINO'
-ELSE 
-    'OUTRO'    
-END AS sexoCliente
-FROM tbclientes;"; 
+    idCliente,
+    upper(nomeCliente) AS nomeCliente,
+    lower(emailCliente) AS emailCliente,
+    telefoneCliente,
+    upper(enderecoCliente) AS enderecoCliente,
+    cpfCliente,
+    DATE_FORMAT(dataNascCliente, '%d/%m/%Y') AS dataNascCliente,
+    CASE 
+        WHEN sexoCliente = 'F' THEN 'FEMININO'
+        WHEN sexoCliente = 'M' THEN 'MASCULINO'
+        ELSE 'OUTRO'    
+    END AS sexoCliente
+FROM tbclientes;";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 
