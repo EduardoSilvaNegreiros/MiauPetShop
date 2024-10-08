@@ -1,4 +1,6 @@
 <?php
+session_start(); // Inicia a sessão
+
 // Incluir arquivo de configuração e conexão ao banco de dados
 include '../database/conexao.php';
 include '../database/config.php';
@@ -12,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
     $confirmarSenha = $_POST['confirmarSenha'];
-    $genero = $_POST['gender']; // Certifique-se que o campo no formulário seja 'gender'
+    $genero = $_POST['gender']; // Corrigido para 'gender'
 
     // Verifica se a senha e a confirmação são iguais
     if ($senha !== $confirmarSenha) {
@@ -27,23 +29,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO usuarios (primeiroNome, segundoNome, email, telefone, senha, genero) VALUES (?, ?, ?, ?, ?, ?)";
     
     // Preparar e executar a consulta
-    if ($stmt = $conexao->prepare($sql)) {
-        $stmt->bind_param("ssssss", $primeiro_nome, $sobrenome, $email, $telefone, $senhaCriptografada, $genero);
-        
-        // Executar a consulta
-        if ($stmt->execute()) {
-            echo "Cadastro realizado com sucesso!";
-        } else {
-            echo "Erro ao cadastrar: " . $stmt->error;
-        }
+    $stmt = $conexao->prepare($sql);
+    $stmt->bind_param("ssssss", $primeiro_nome, $sobrenome, $email, $telefone, $senhaCriptografada, $genero);
 
-        // Fechar a conexão
-        $stmt->close();
+    if ($stmt->execute()) {
+        // Mensagem de sucesso
+        $_SESSION['success_message'] = "Cadastro realizado com sucesso! Faça login para seguir.";
+        header("Location: ../login.php"); // Redireciona para a página de login
+        exit();
     } else {
-        echo "Erro ao preparar a consulta: " . $conexao->error;
+        echo "Erro: " . $stmt->error;
     }
 
     // Fechar a conexão
+    $stmt->close();
     $conexao->close();
 } else {
     echo "Método de requisição inválido.";
