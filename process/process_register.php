@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
     $confirmarSenha = $_POST['confirmarSenha'];
-    $genero = $_POST['gender']; // Corrigido para 'gender'
+    $genero = $_POST['genero']; // Corrigido para 'genero'
 
     // Verifica se a senha e a confirmação são iguais
     if ($senha !== $confirmarSenha) {
