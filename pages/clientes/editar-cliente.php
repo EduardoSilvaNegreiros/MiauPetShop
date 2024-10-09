@@ -17,28 +17,28 @@ $dados = mysqli_fetch_assoc($rs);
 
             <div class="input-box">
                 <label for="idCliente">ID</label>
-                <input type="text" name="idCliente" id="idCliente" required> <!-- Campo para id -->
+                <input type="text" name="idCliente" id="idCliente"  value="<?=$dados['idCliente']?>"> <!-- Campo para id -->
             </div>
 
             <div class="input-box">
                 <label for="nomeCliente">Nome</label>
-                <input type="text" name="nomeCliente" id="nomeCliente" required> <!-- Campo para nome -->
+                <input type="text" name="nomeCliente" id="nomeCliente" > <!-- Campo para nome -->
             </div>
 
 
             <div class="input-box">
                 <label for="emailCliente">E-mail</label>
-                <input type="email" name="emailCliente" id="emailCliente" required> <!-- Campo para e-mail -->
+                <input type="email" name="emailCliente" id="emailCliente" > <!-- Campo para e-mail -->
             </div>
 
             <div class="input-box">
                 <label for="telefoneCliente">Telefone</label>
-                <input type="text" name="telefoneCliente" id="telefoneCliente" required> <!-- Campo para telefone -->
+                <input type="text" name="telefoneCliente" id="telefoneCliente" > <!-- Campo para telefone -->
             </div>
 
             <div class="input-box">
                 <label for="enderecoCliente">Endereço</label>
-                <input type="text" name="enderecoCliente" id="enderecoCliente" required> <!-- Campo para telefone -->
+                <input type="text" name="enderecoCliente" id="enderecoCliente" > <!-- Campo para telefone -->
             </div>
 
             <div class="input-box">
@@ -48,13 +48,13 @@ $dados = mysqli_fetch_assoc($rs);
 
             <div class="input-box">
                 <label for="dataNascCliente">Data de Nascimento</label>
-                <input type="date" name="dataNascCliente" id="dataNascCliente" required>
+                <input type="date" name="dataNascCliente" id="dataNascCliente" >
                 <!-- Campo para data de nascimento -->
             </div>
 
             <div class="input-box">
                 <label for="cpfCliente">CPF</label>
-                <input type="text" name="cpfCliente" id="cpfCliente" required> <!-- Campo para CPF -->
+                <input type="text" name="cpfCliente" id="cpfCliente" > <!-- Campo para CPF -->
             </div>
         </div>
 
