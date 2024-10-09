@@ -52,6 +52,7 @@
         </div>
 
         <div>
-            <input type="submit" value="Adicionar" name="btnAdicionar" class="button-add"> <!-- Botão de envio -->
+            <input type="submit" value="Atualizar" name="btnAtualizar" class="button-add"> 
         </div>
+
 </form>
