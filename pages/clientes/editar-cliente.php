@@ -2,7 +2,7 @@
 $idCliente = $_GET['idCliente'];
 $sql = "SELECT * FROM tbclientes WHERE idCliente= {$idCliente}";
 $rs = mysqli_query($conexao, $sql) or die ('Erro ao recuperar os dados do registro' . mysqli_error($conexao));
-$dados = ;
+$dados = mysqli_fetch_assoc($rs);
 ?>
 
 <header>
