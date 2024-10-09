@@ -53,6 +53,10 @@ include("../database/conexao.php");
                         include("clientes/inserir-clientes.php");
                         break;
 
+                    case 'editar-cliente':
+                        include("clientes/editar-cliente.php");
+                        break;
+
                     case 'servicos':
                         include("servicos.php");
                         break;
