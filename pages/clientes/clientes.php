@@ -19,9 +19,10 @@
             <th>Sexo</th>
             <th>Data de Nasc.</th>
             <th>CPF</th>
+            <th>Edição</th>
         </tr>
     </thead>
-    
+
     <tbody>
 
         <?php
@@ -53,6 +54,7 @@
                 <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
                 <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
                 <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
+                <td> <a href="index.php?menuop=editar-cliente"></a>Editar</td>
             </tr>
         <?php
         } // Fim do loop
