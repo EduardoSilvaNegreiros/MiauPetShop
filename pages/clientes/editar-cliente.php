@@ -1,5 +1,7 @@
 <?php 
 $idCliente = $_GET['idCliente'];
+$sql = "SELECT * FROM tbclientes";
+$rs = mysqli_query($conexao, $sql);
 ?>
 
 <header>
