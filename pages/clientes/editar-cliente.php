@@ -1,3 +1,7 @@
+<?php 
+$idCliente = $_GET['idCliente'];
+?>
+
 <header>
   <h3>Editar Cliente</h3>
 </header>
