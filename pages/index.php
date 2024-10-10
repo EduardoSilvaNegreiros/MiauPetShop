@@ -57,6 +57,10 @@ include("../database/conexao.php");
                         include("clientes/editar-cliente.php");
                         break;
 
+                    case 'atualizar-cliente':
+                        include("clientes/atualizar-cliente.php");
+                        break;
+
                     case 'servicos':
                         include("servicos.php");
                         break;
