@@ -9,7 +9,7 @@ $dados = mysqli_fetch_assoc($rs);
   <h3>Editar Cliente</h3>
 </header>
 
-<form action="index.php?menuop=atualiza-cliente" method="POST" class="form">
+<form action="index.php?menuop=atualizar-cliente" method="POST" class="form">
 
     <div class="input-group">
 

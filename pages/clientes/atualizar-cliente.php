@@ -13,14 +13,14 @@ $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]
 $enderecoCliente = mysqli_real_escape_string($conexao, $_POST["enderecoCliente"]); // Endereço do cliente
 
 $sql = "UPDATE tbclientes SET
-  nomeCliente = {$nomeCliente},
-  emailCliente = {$emailCliente},
-  dataNascCliente = {$dataNascCliente},
-  cpfCliente = {$cpfCliente},
-  sexoCliente = {$sexoCliente},
-  telefoneCliente = {$telefoneCliente},
-  enderecoCliente = {$enderecoCliente},
-  WHERE idCliente = {$idCliente},
+  nomeCliente = '{$nomeCliente}',
+  emailCliente = '{$emailCliente}',
+  dataNascCliente = '{$dataNascCliente}',
+  cpfCliente = '{$cpfCliente}',
+  sexoCliente = '{$sexoCliente}',
+  telefoneCliente = '{$telefoneCliente}',
+  enderecoCliente = '{$enderecoCliente}'
+  WHERE idCliente = '{$idCliente}'
 ";
 
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
