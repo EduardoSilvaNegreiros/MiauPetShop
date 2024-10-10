@@ -3,7 +3,7 @@
 </header>
 
 <?php
-$idCliente = mysqli_real_escape_string($conexao, $_POST["idCliente"]);
+$idCliente = mysqli_real_escape_string($conexao, $_POST["idCliente"]); // Id do cliente
 $nomeCliente = mysqli_real_escape_string($conexao, $_POST["nomeCliente"]); // Nome do cliente
 $emailCliente = mysqli_real_escape_string($conexao, $_POST["emailCliente"]); // E-mail do cliente
 $dataNascCliente = mysqli_real_escape_string($conexao, $_POST["dataNascCliente"]); // Data de nascimento do cliente
@@ -12,24 +12,15 @@ $sexoCliente = mysqli_real_escape_string($conexao, $_POST["sexoCliente"]); // Se
 $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]); // Telefone do cliente
 $enderecoCliente = mysqli_real_escape_string($conexao, $_POST["enderecoCliente"]); // Endereço do cliente
 
-// Constrói a instrução SQL para inserir os dados na tabela tbClientes
-$sql = "INSERT INTO tbclientes (
-    nomeCliente, 
-    emailCliente, 
-    telefoneCliente, 
-    enderecoCliente, 
-    sexoCliente, 
-    dataNascCliente,
-    cpfCliente 
-) VALUES (
-    '{$nomeCliente}', 
-    '{$emailCliente}', 
-    '{$telefoneCliente}', 
-    '{$enderecoCliente}', 
-    '{$sexoCliente}',
-    '{$dataNascCliente}', 
-    '{$cpfCliente}'
-)";
+$sql = "UPDATE tbclientes SET
+  nomeCliente = {$nomeCliente},
+  emailCliente = {$emailCliente},
+  dataNascCliente = {$dataNascCliente},
+  cpfCliente = {$cpfCliente},
+  sexoCliente = {$sexoCliente},
+  telefoneCliente = {$telefoneCliente},
+  enderecoCliente = {$enderecoCliente},
+";
 
 // Executa a instrução SQL
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
