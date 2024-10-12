@@ -1,26 +1,26 @@
 <header>
-    <h3>Atualizar Funcionario</h3>
+    <h3>Atualizar Pet</h3>
 </header>
 
 <?php
-$idFuncionario = mysqli_real_escape_string($conexao, $_POST["idFuncionario"]); // Id do Funcionario
-$nomeFuncionario = mysqli_real_escape_string($conexao, $_POST["nomeFuncionario"]); // Nome do Funcionario
-$emailFuncionario = mysqli_real_escape_string($conexao, $_POST["emailFuncionario"]); // E-mail do Funcionario
-$dataNascFuncionario = mysqli_real_escape_string($conexao, $_POST["dataNascFuncionario"]); // Data de nascimento do Funcionario
-$cpfFuncionario = mysqli_real_escape_string($conexao, $_POST["cpfFuncionario"]); // CPF do Funcionario
-$sexoFuncionario = mysqli_real_escape_string($conexao, $_POST["sexoFuncionario"]); // Sexo do Funcionario
-$telefoneFuncionario = mysqli_real_escape_string($conexao, $_POST["telefoneFuncionario"]); // Telefone do Funcionario
-$enderecoFuncionario = mysqli_real_escape_string($conexao, $_POST["enderecoFuncionario"]); // Endereço do Funcionario
+$idPet = mysqli_real_escape_string($conexao, $_POST["idPet"]); // Id do Pet
+$nomePet = mysqli_real_escape_string($conexao, $_POST["nomePet"]); // Nome do Pet
+$emailPet = mysqli_real_escape_string($conexao, $_POST["emailPet"]); // E-mail do Pet
+$dataNascPet = mysqli_real_escape_string($conexao, $_POST["dataNascPet"]); // Data de nascimento do Pet
+$cpfPet = mysqli_real_escape_string($conexao, $_POST["cpfPet"]); // CPF do Pet
+$sexoPet = mysqli_real_escape_string($conexao, $_POST["sexoPet"]); // Sexo do Pet
+$telefonePet = mysqli_real_escape_string($conexao, $_POST["telefonePet"]); // Telefone do Pet
+$enderecoPet = mysqli_real_escape_string($conexao, $_POST["enderecoPet"]); // Endereço do Pet
 
-$sql = "UPDATE tbFuncionarios SET
-  nomeFuncionario = '{$nomeFuncionario}',
-  emailFuncionario = '{$emailFuncionario}',
-  dataNascFuncionario = '{$dataNascFuncionario}',
-  cpfFuncionario = '{$cpfFuncionario}',
-  sexoFuncionario = '{$sexoFuncionario}',
-  telefoneFuncionario = '{$telefoneFuncionario}',
-  enderecoFuncionario = '{$enderecoFuncionario}'
-  WHERE idFuncionario = '{$idFuncionario}'
+$sql = "UPDATE tbPets SET
+  nomePet = '{$nomePet}',
+  emailPet = '{$emailPet}',
+  dataNascPet = '{$dataNascPet}',
+  cpfPet = '{$cpfPet}',
+  sexoPet = '{$sexoPet}',
+  telefonePet = '{$telefonePet}',
+  enderecoPet = '{$enderecoPet}'
+  WHERE idPet = '{$idPet}'
 ";
 
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
