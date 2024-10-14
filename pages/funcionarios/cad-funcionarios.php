@@ -16,6 +16,11 @@
             </div>
 
             <div class="input-box">
+                <label for="cpfFuncionario">CPF</label>
+                <input type="text" name="cpfFuncionario" id="cpfFuncionario" required> <!-- Campo para CPF -->
+            </div>
+
+            <div class="input-box">
                 <label for="emailFuncionario">E-mail</label>
                 <input type="email" name="emailFuncionario" id="emailFuncionario" required> <!-- Campo para e-mail -->
             </div>
@@ -41,8 +46,8 @@
             </div>
 
             <div class="input-box">
-                <label for="statusFuncionario">Status</label>
-                <input type="text" name="statusFuncionario" id="statusFuncionario" required> <!-- Campo para status -->
+                <label for="statusFuncionario">Status Funcionário</label>
+                <input type="text" name="statusFuncionario" id="statusFuncionario" required> <!-- Campo para salário -->
             </div>
         </div>
 
