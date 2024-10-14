@@ -20,6 +20,7 @@
             <th>Data de Nasc.</th>
             <th>CPF</th>
             <th>Edição</th>
+            <th>Excluir</th>
         </tr>
     </thead>
 
@@ -55,6 +56,7 @@
                 <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
                 <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
                 <td><a href="index.php?menuop=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
+                <td><a href="index.php?menuop=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
             </tr>
         <?php
         } // Fim do loop
