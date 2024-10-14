@@ -17,6 +17,7 @@ include("../database/conexao.php");
     <div class="container">
         <div class="content">
 
+            <!-- Cabeçalho com navegação -->
             <header class="header">
                 <h1>Pet Shop</h1>
                 <nav>
@@ -27,12 +28,15 @@ include("../database/conexao.php");
                 </nav>
             </header>
 
+            <!-- Conteúdo principal -->
             <main>
                 <?php
-                // Define a página a ser incluída
+                // Define a página a ser incluída com base no parâmetro GET 'menuop'
                 $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'default_value';
 
                 switch ($menuop) {
+
+                    // Funcionalidades relacionadas aos funcionários
                     case 'funcionarios':
                         include("funcionarios/funcionarios.php");
                         break;
@@ -41,6 +45,7 @@ include("../database/conexao.php");
                         include("funcionarios/cad-funcionarios.php");
                         break;
 
+                    // Funcionalidades relacionadas aos clientes
                     case 'clientes':
                         include("clientes/clientes.php");
                         break;
@@ -65,10 +70,12 @@ include("../database/conexao.php");
                         include("clientes/excluir-cliente.php");
                         break;
 
+                    // Funcionalidades relacionadas aos serviços
                     case 'servicos':
                         include("servicos.php");
                         break;
 
+                    // Funcionalidades relacionadas aos pets
                     case 'pets':
                         include("pets/pets.php");
                         break;
@@ -77,6 +84,7 @@ include("../database/conexao.php");
                         include("../pages/pets/cad-pets.php");
                         break;
 
+                    // Valor padrão (caso não haja uma opção correspondente)
                     default:
                         include("funcionarios/funcionarios.php");
                         break;
