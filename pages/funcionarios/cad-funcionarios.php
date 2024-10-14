@@ -47,7 +47,11 @@
 
             <div class="input-box">
                 <label for="statusFuncionario">Status Funcionário</label>
-                <input type="text" name="statusFuncionario" id="statusFuncionario" required> <!-- Campo para salário -->
+                <select name="statusFuncionario" id="statusFuncionario" required>
+                    <option value="">Selecione o status</option>
+                    <option value="Ativo">Ativo</option>
+                    <option value="Inativo">Inativo</option>
+                </select>
             </div>
         </div>
 

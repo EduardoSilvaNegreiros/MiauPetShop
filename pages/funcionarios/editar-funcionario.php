@@ -56,8 +56,12 @@ $dados = mysqli_fetch_assoc($rs);
             </div>
 
             <div class="input-box">
-                <label for="statusFuncionario">Status</label>
-                <input type="text" name="statusFuncionario" id="statusFuncionario" value="<?=$dados['statusFuncionario']?>">
+                <label for="statusFuncionario">Status Funcionário</label>
+                <select name="statusFuncionario" id="statusFuncionario" required>
+                    <option value="">Selecione o status</option>
+                    <option value="Ativo">Ativo</option>
+                    <option value="Inativo">Inativo</option>
+                </select>
             </div>
             
         </div>
