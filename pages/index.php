@@ -36,7 +36,7 @@ include("../database/conexao.php");
 
                 switch ($menuop) {
 
-                    // Funcionalidades relacionadas aos funcionários
+                        // Funcionalidades relacionadas aos funcionários
                     case 'funcionarios':
                         include("funcionarios/funcionarios.php");
                         break;
@@ -45,7 +45,23 @@ include("../database/conexao.php");
                         include("funcionarios/cad-funcionarios.php");
                         break;
 
-                    // Funcionalidades relacionadas aos clientes
+                    case 'inserir-funcionarios':
+                        include("funcionarios/inserir-funcionarios.php");
+                        break;
+
+                    case 'editar-funcionarios':
+                        include("funcionarios/editar-funcionario.php");
+                        break;
+
+                    case 'atualizar-funcionarios':
+                        include("funcionarios/atualizar-funcionario.php");
+                        break;
+
+                    case 'excluir-funcionarios':
+                        include("clientes/excluir-funcionario.php");
+                        break;
+
+                        // Funcionalidades relacionadas aos clientes
                     case 'clientes':
                         include("clientes/clientes.php");
                         break;
@@ -70,12 +86,12 @@ include("../database/conexao.php");
                         include("clientes/excluir-cliente.php");
                         break;
 
-                    // Funcionalidades relacionadas aos serviços
+                        // Funcionalidades relacionadas aos serviços
                     case 'servicos':
                         include("servicos.php");
                         break;
 
-                    // Funcionalidades relacionadas aos pets
+                        // Funcionalidades relacionadas aos pets
                     case 'pets':
                         include("pets/pets.php");
                         break;
@@ -84,7 +100,7 @@ include("../database/conexao.php");
                         include("../pages/pets/cad-pets.php");
                         break;
 
-                    // Valor padrão (caso não haja uma opção correspondente)
+                        // Valor padrão (caso não haja uma opção correspondente)
                     default:
                         include("funcionarios/funcionarios.php");
                         break;

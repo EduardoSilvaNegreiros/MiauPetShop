@@ -11,27 +11,31 @@
         <tr>
             <th>ID</th>
             <th>Nome</th>
+            <th>Cpf</th>
             <th>E-mail</th>
             <th>Telefone</th>
             <th>Cargo</th>
             <th>Data de Contratação</th>
             <th>Salário</th>
             <th>Status</th>
+            <th>Edição</th>
+            <th>Excluir</th>
         </tr>
     </thead>
     <tbody>
       
         <?php
-        $sql = "SELECT
-            idFuncionario,
-            upper(nomeFuncionario) AS nomeFuncionario,
-            lower(emailFuncionario) AS emailFuncionario,
-            telefoneFuncionario,
-            cargoFuncionario,
-            DATE_FORMAT(dataContratacao, '%d/%m/%Y') AS dataContratacao,
-            salarioFuncionario,
-            statusFuncionario
-        FROM Funcionarios;";
+          $sql = "SELECT
+          idFuncionario,
+          upper(nomeFuncionario) AS nomeFuncionario,
+          lower(emailFuncionario) AS emailFuncionario,
+          telefoneFuncionario,
+          cpfFuncionario,  // Certifique-se de que essa coluna existe
+          cargoFuncionario,
+          DATE_FORMAT(dataContratacao, '%d/%m/%Y') AS dataContratacao,
+          salarioFuncionario,
+          statusFuncionario
+      FROM tbfuncionarios;";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 
