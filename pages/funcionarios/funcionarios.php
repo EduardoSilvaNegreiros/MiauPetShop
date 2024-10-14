@@ -40,12 +40,15 @@
             <tr>
                 <td><?php echo $dados["idFuncionario"] ?></td> <!-- ID do funcionário -->
                 <td><?php echo $dados["nomeFuncionario"] ?></td> <!-- Nome do funcionário -->
+                <td><?php echo $dados["cpfFuncionario"] ?></td>
                 <td><?php echo $dados["emailFuncionario"] ?></td> <!-- E-mail do funcionário -->
                 <td><?php echo $dados["telefoneFuncionario"] ?></td> <!-- Telefone do funcionário -->
                 <td><?php echo $dados["cargoFuncionario"] ?></td> <!-- Cargo do funcionário -->
                 <td><?php echo $dados["dataContratacao"] ?></td> <!-- Data de contratação do funcionário -->
                 <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td> <!-- Salário do funcionário formatado -->
                 <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
+                <td><a href="index.php?menuop=editar-funcionario&idfuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a></td>
+                <td><a href="index.php?menuop=excluir-funcionario&idfuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a></td>
             </tr>
         <?php
         } // Fim do loop
