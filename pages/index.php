@@ -49,16 +49,16 @@ include("../database/conexao.php");
                         include("funcionarios/inserir-funcionarios.php");
                         break;
 
-                    case 'editar-funcionarios':
+                    case 'editar-funcionario':
                         include("funcionarios/editar-funcionario.php");
                         break;
 
-                    case 'atualizar-funcionarios':
+                    case 'atualizar-funcionario':
                         include("funcionarios/atualizar-funcionario.php");
                         break;
 
-                    case 'excluir-funcionarios':
-                        include("clientes/excluir-funcionario.php");
+                    case 'excluir-funcionario':
+                        include("funcionarios/excluir-funcionario.php");
                         break;
 
                         // Funcionalidades relacionadas aos clientes

@@ -61,5 +61,4 @@ $dados = mysqli_fetch_assoc($rs);
         <div>
             <input type="submit" value="Atualizar" name="btnAtualizar" class="button-add"> 
         </div>
-
 </form>

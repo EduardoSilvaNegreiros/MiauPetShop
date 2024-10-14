@@ -1,4 +1,3 @@
-<!-- O arquivo clientes.php é carregado junto ao index, com a conexão ao banco de dados. -->
 <header>
     <h3>Clientes</h3> <!-- Título da seção -->
 </header>

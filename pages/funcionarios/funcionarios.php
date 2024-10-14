@@ -1,9 +1,9 @@
 <header>
-    <h3>Funcionários</h3> <!-- Título da seção -->
+    <h3>Funcionários</h3> 
 </header>
 
 <div>
-    <a href="index.php?menuop=cad-funcionarios">Novo Funcionário</a> <!-- Link para cadastro de novo funcionário -->
+    <a href="index.php?menuop=cad-funcionarios">Novo Funcionário</a> 
 </div>
 
 <table>
@@ -30,7 +30,7 @@
           upper(nomeFuncionario) AS nomeFuncionario,
           lower(emailFuncionario) AS emailFuncionario,
           telefoneFuncionario,
-          cpfFuncionario,  // Certifique-se de que essa coluna existe
+          cpfFuncionario,  
           cargoFuncionario,
           DATE_FORMAT(dataContratacao, '%d/%m/%Y') AS dataContratacao,
           salarioFuncionario,
@@ -51,11 +51,11 @@
                 <td><?php echo $dados["dataContratacao"] ?></td> <!-- Data de contratação do funcionário -->
                 <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td> <!-- Salário do funcionário formatado -->
                 <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
-                <td><a href="index.php?menuop=editar-funcionario&idfuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a></td>
-                <td><a href="index.php?menuop=excluir-funcionario&idfuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a></td>
+                <td><a href="index.php?menuop=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a></td>
+                <td><a href="index.php?menuop=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a></td>
             </tr>
         <?php
-        } // Fim do loop
+        } 
         ?>
     </tbody>
 </table>

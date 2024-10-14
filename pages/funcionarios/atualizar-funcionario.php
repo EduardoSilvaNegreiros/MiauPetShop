@@ -6,22 +6,22 @@
 $idFuncionario = mysqli_real_escape_string($conexao, $_POST["idFuncionario"]); 
 $nomeFuncionario = mysqli_real_escape_string($conexao, $_POST["nomeFuncionario"]); 
 $cpfFuncionario = mysqli_real_escape_string($conexao, $_POST["cpfFuncionario"]); 
-$emailFuncionario = mysqli_real_escape_string($conexao, $_POST["emailFuncionario"]); 
+$emailFuncionario = mysqli_real_escape_string($conexao, $_POST["emailFuncionario"]);
 $telefoneFuncionario = mysqli_real_escape_string($conexao, $_POST["telefoneFuncionario"]); 
 $cargoFuncionario = mysqli_real_escape_string($conexao, $_POST["cargoFuncionario"]); 
-$salarioFuncionario = mysqli_real_escape_string($conexao, $_POST["salarioFuncionario"]); 
 $dataContratacao = mysqli_real_escape_string($conexao, $_POST["dataContratacao"]); 
+$salarioFuncionario = mysqli_real_escape_string($conexao, $_POST["salarioFuncionario"]); 
 $statusFuncionario = mysqli_real_escape_string($conexao, $_POST["statusFuncionario"]); 
 
 
 $sql = "UPDATE tbFuncionarios SET
   nomeFuncionario = '{$nomeFuncionario}',
-  cpfFuncionario = '{$cpfFuncionario}',
   emailFuncionario = '{$emailFuncionario}',
-  telefoneFuncionario = '{$telefoneFuncionario}',
   cargoFuncionario = '{$cargoFuncionario}',
+  cpfFuncionario = '{$cpfFuncionario}',
+  dataContratacao = '{$dataContratacao}',
+  telefoneFuncionario = '{$telefoneFuncionario}',
   salarioFuncionario = '{$salarioFuncionario}',
-  dataContratacao = '{$dataContratacao}'
   statusFuncionario = '{$statusFuncionario}'
   WHERE idFuncionario = '{$idFuncionario}'
 ";
