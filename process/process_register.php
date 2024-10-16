@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
 
     // SQL para inserir dados no banco de dados
-    $sql = "INSERT INTO usuarios (primeiroNome, segundoNome, email, telefone, senha, genero) VALUES (?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO tbusuarios (primeiroNome, segundoNome, email, telefone, senha, genero) VALUES (?, ?, ?, ?, ?, ?)";
     
     // Preparar e executar a consulta
     $stmt = $conexao->prepare($sql);

@@ -12,7 +12,7 @@ $sexoCliente = mysqli_real_escape_string($conexao, $_POST["sexoCliente"]); // Se
 $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]); // Telefone do cliente
 $enderecoCliente = mysqli_real_escape_string($conexao, $_POST["enderecoCliente"]); // Endereço do cliente
 
-$sql = "UPDATE tbclientes SET
+$sql = "UPDATE tabelaclientes SET
   nomeCliente = '{$nomeCliente}',
   emailCliente = '{$emailCliente}',
   dataNascCliente = '{$dataNascCliente}',
