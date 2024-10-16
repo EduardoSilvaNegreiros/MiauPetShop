@@ -100,7 +100,7 @@ include("../database/conexao.php");
                         include("pets/cad-pets.php");
                         break;
 
-                    case 'editar-pets':
+                    case 'editar-pet':
                         include("pets/editar-pets.php");
                         break;
 
@@ -110,6 +110,10 @@ include("../database/conexao.php");
 
                     case 'inserir-pets':
                         include("pets/inserir-pets.php");
+                        break;
+
+                    case 'excluir-pet':
+                        include("pets/excluir-pet.php");
                         break;
 
                         // Valor padrão (caso não haja uma opção correspondente)
