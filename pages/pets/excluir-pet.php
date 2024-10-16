@@ -4,7 +4,7 @@
 
 <?php 
 $idPet = mysqli_real_escape_string($conexao, $_GET["idPet"]);
-$sql = "DELETE FROM tbPets WHERE idPet = '$idPet'";
+$sql = "DELETE FROM tbpets WHERE idPet = '$idPet'";
 
 mysqli_query($conexao, $sql) or die("Erro ao excluir o registro: " . mysqli_error($conexao));
 echo "Registro excluído com sucesso!";
