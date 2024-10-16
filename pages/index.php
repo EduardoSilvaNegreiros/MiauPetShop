@@ -108,7 +108,7 @@ include("../database/conexao.php");
                         include("pets/atualizar-pet.php");
                         break;
 
-                    case 'inserir-pets.php':
+                    case 'inserir-pets':
                         include("pets/inserir-pets.php");
                         break;
 

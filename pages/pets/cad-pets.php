@@ -2,7 +2,7 @@
     <h3>Cadastro de Pet</h3>
 </header>
 
-<form action="" method="post" class="form">
+<form action="index.php?menuop=inserir-pets" method="post" class="form">
     <div class="input-group">
 
         <div class="input-box">
