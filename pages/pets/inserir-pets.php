@@ -3,34 +3,30 @@
 </header>
 
 <?php
-// Recebe os dados do formulário e protege contra injeção SQL
-$nomePet = mysqli_real_escape_string($conexao, $_POST["nomePet"]); // Nome do pet
-$tipoPet = mysqli_real_escape_string($conexao, $_POST["tipoPet"]); // Tipo do pet
-$racaPet = mysqli_real_escape_string($conexao, $_POST["racaPet"]); // Raça do pet
-$sexoPet = mysqli_real_escape_string($conexao, $_POST["sexoPet"]); // Sexo do pet
-$dataNascPet = mysqli_real_escape_string($conexao, $_POST["dataNascPet"]); // Data de nascimento do pet
-$cpfDono = mysqli_real_escape_string($conexao, $_POST["cpfDono"]); // CPF do dono do pet
+$nomePet = mysqli_real_escape_string($conexao, $_POST["nomePet"]);
+$tipoPet = mysqli_real_escape_string($conexao, $_POST["tipoPet"]);
+$racaPet = mysqli_real_escape_string($conexao, $_POST["racaPet"]);
+$sexoPet = mysqli_real_escape_string($conexao, $_POST["sexoPet"]);
+$idadePet = mysqli_real_escape_string($conexao, $_POST["idadePet"]);
+$pesoPet = mysqli_real_escape_string($conexao, $_POST["pesoPet"]);
 
-// Constrói a instrução SQL para inserir os dados na tabela tbPets
 $sql = "INSERT INTO tbPets (
     nomePet, 
     tipoPet, 
     racaPet, 
     sexoPet, 
-    dataNascPet, 
-    cpfDono
+    idadePet, 
+    pesoPet
 ) VALUES (
     '{$nomePet}', 
     '{$tipoPet}', 
     '{$racaPet}', 
     '{$sexoPet}', 
-    '{$dataNascPet}', 
-    '{$cpfDono}'
+    '{$idadePet}', 
+    '{$pesoPet}'
 )";
 
-// Executa a instrução SQL
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
 
-// Caso ocorra tudo corretamente, aparecerá esta mensagem de sucesso
 echo "O registro foi inserido com sucesso!";
 ?>
