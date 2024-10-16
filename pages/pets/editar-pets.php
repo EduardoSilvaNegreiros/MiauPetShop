@@ -1,6 +1,6 @@
 <?php 
 $idPet = $_GET['idPet'];
-$sql = "SELECT * FROM tbPets WHERE idPet = {$idPet}";
+$sql = "SELECT * FROM tbpets WHERE idPet = {$idPet}";
 $rs = mysqli_query($conexao, $sql) or die ('Erro ao recuperar os dados do registro: ' . mysqli_error($conexao));
 $dados = mysqli_fetch_assoc($rs);
 ?>

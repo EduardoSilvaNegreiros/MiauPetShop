@@ -10,7 +10,7 @@ $sexoPet = mysqli_real_escape_string($conexao, $_POST["sexoPet"]);
 $idadePet = mysqli_real_escape_string($conexao, $_POST["idadePet"]);
 $pesoPet = mysqli_real_escape_string($conexao, $_POST["pesoPet"]);
 
-$sql = "INSERT INTO tbPets (
+$sql = "INSERT INTO tbpets (
     nomePet, 
     tipoPet, 
     racaPet, 

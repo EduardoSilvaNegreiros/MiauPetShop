@@ -37,7 +37,7 @@
         WHEN sexoPet = 'M' THEN 'MASCULINO'
         ELSE 'OUTRO'    
     END AS sexoPet
-    FROM tbPets;";
+    FROM tbpets;";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 

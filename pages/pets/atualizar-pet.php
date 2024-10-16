@@ -11,7 +11,7 @@ $idadePet = mysqli_real_escape_string($conexao, $_POST["idadePet"]);
 $sexoPet = mysqli_real_escape_string($conexao, $_POST["sexoPet"]);
 $pesoPet = mysqli_real_escape_string($conexao, $_POST["pesoPet"]);
 
-$sql = "UPDATE tbPets SET
+$sql = "UPDATE tbpets SET
     nomePet = '{$nomePet}',
     tipoPet = '{$tipoPet}',
     racaPet = '{$racaPet}',
