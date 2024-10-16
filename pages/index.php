@@ -1,6 +1,9 @@
 <?php
-// Conecta ao banco de dados
+// Conexão com o banco de dados
 include("../database/conexao.php");
+
+// Definindo o valor padrão para o parâmetro 'menuop'
+$menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor padrão modificado para 'funcionarios'
 ?>
 
 <!DOCTYPE html>
@@ -31,92 +34,74 @@ include("../database/conexao.php");
             <!-- Conteúdo principal -->
             <main>
                 <?php
-                // Define a página a ser incluída com base no parâmetro GET 'menuop'
-                $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'default_value';
-
+                // Inclui a página correspondente ao valor de 'menuop'
                 switch ($menuop) {
-
-                        // Funcionalidades relacionadas aos funcionários
+                    // Funcionalidades relacionadas aos funcionários
                     case 'funcionarios':
                         include("funcionarios/funcionarios.php");
                         break;
-
                     case 'cad-funcionarios':
                         include("funcionarios/cad-funcionarios.php");
                         break;
-
                     case 'inserir-funcionarios':
                         include("funcionarios/inserir-funcionarios.php");
                         break;
-
                     case 'editar-funcionario':
                         include("funcionarios/editar-funcionario.php");
                         break;
-
                     case 'atualizar-funcionario':
                         include("funcionarios/atualizar-funcionario.php");
                         break;
-
                     case 'excluir-funcionario':
                         include("funcionarios/excluir-funcionario.php");
                         break;
 
-                        // Funcionalidades relacionadas aos clientes
+                    // Funcionalidades relacionadas aos clientes
                     case 'clientes':
                         include("clientes/clientes.php");
                         break;
-
                     case 'cad-clientes':
                         include("clientes/cad-clientes.php");
                         break;
-
                     case 'inserir-clientes':
                         include("clientes/inserir-clientes.php");
                         break;
-
                     case 'editar-cliente':
                         include("clientes/editar-cliente.php");
                         break;
-
                     case 'atualizar-cliente':
                         include("clientes/atualizar-cliente.php");
                         break;
-
                     case 'excluir-cliente':
                         include("clientes/excluir-cliente.php");
                         break;
 
-                        // Funcionalidades relacionadas aos serviços
+                    // Funcionalidades relacionadas aos serviços
                     case 'servicos':
                         include("servicos.php");
                         break;
 
-                        // Funcionalidades relacionadas aos pets
+                    // Funcionalidades relacionadas aos pets
                     case 'pets':
                         include("pets/pets.php");
                         break;
-
                     case 'cad-pets':
                         include("pets/cad-pets.php");
                         break;
-
                     case 'editar-pet':
                         include("pets/editar-pets.php");
                         break;
-
                     case 'atualizar-pet':
                         include("pets/atualizar-pet.php");
                         break;
-
                     case 'inserir-pets':
                         include("pets/inserir-pets.php");
                         break;
-
                     case 'excluir-pet':
                         include("pets/excluir-pet.php");
                         break;
 
-                        // Valor padrão (caso não haja uma opção correspondente)
+                    // Valor padrão (caso não haja uma opção correspondente)
                     default:
                         include("funcionarios/funcionarios.php");
                         break;
