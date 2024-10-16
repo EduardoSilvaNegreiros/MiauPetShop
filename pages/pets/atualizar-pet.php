@@ -5,25 +5,23 @@
 <?php
 $idPet = mysqli_real_escape_string($conexao, $_POST["idPet"]); // Id do Pet
 $nomePet = mysqli_real_escape_string($conexao, $_POST["nomePet"]); // Nome do Pet
-$emailPet = mysqli_real_escape_string($conexao, $_POST["emailPet"]); // E-mail do Pet
-$dataNascPet = mysqli_real_escape_string($conexao, $_POST["dataNascPet"]); // Data de nascimento do Pet
-$cpfPet = mysqli_real_escape_string($conexao, $_POST["cpfPet"]); // CPF do Pet
+$tipoPet = mysqli_real_escape_string($conexao, $_POST["tipoPet"]); // Tipo do Pet (Cachorro, Gato, etc.)
+$racaPet = mysqli_real_escape_string($conexao, $_POST["racaPet"]); // Raça do Pet
+$idadePet = mysqli_real_escape_string($conexao, $_POST["idadePet"]); // Idade do Pet
 $sexoPet = mysqli_real_escape_string($conexao, $_POST["sexoPet"]); // Sexo do Pet
-$telefonePet = mysqli_real_escape_string($conexao, $_POST["telefonePet"]); // Telefone do Pet
-$enderecoPet = mysqli_real_escape_string($conexao, $_POST["enderecoPet"]); // Endereço do Pet
+$pesoPet = mysqli_real_escape_string($conexao, $_POST["pesoPet"]); // Peso do Pet
 
 $sql = "UPDATE tbPets SET
   nomePet = '{$nomePet}',
-  emailPet = '{$emailPet}',
-  dataNascPet = '{$dataNascPet}',
-  cpfPet = '{$cpfPet}',
+  tipoPet = '{$tipoPet}',
+  racaPet = '{$racaPet}',
+  idadePet = '{$idadePet}',
   sexoPet = '{$sexoPet}',
-  telefonePet = '{$telefonePet}',
-  enderecoPet = '{$enderecoPet}'
+  pesoPet = '{$pesoPet}'
   WHERE idPet = '{$idPet}'
 ";
 
-mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
+mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
 
 echo "O registro foi atualizado com sucesso!";
 ?>
