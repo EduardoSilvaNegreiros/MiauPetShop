@@ -3,6 +3,7 @@
 </header>
 
 <?php
+// Assumindo que a conexão já está feita e que a variável $conexao está definida
 $nomePet = mysqli_real_escape_string($conexao, $_POST["nomePet"]);
 $tipoPet = mysqli_real_escape_string($conexao, $_POST["tipoPet"]);
 $racaPet = mysqli_real_escape_string($conexao, $_POST["racaPet"]);
@@ -26,7 +27,11 @@ $sql = "INSERT INTO tbpets (
     '{$pesoPet}'
 )";
 
-mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
-
-echo "O registro foi inserido com sucesso!";
+// Executa a consulta e verifica se ocorreu algum erro
+if (mysqli_query($conexao, $sql)) {
+    echo "O registro foi inserido com sucesso!";
+} else {
+    // Exibe um erro caso a inserção falhe
+    echo "Erro ao executar a consulta: " . mysqli_error($conexao);
+}
 ?>
