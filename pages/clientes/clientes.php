@@ -39,7 +39,7 @@
         WHEN sexoCliente = 'M' THEN 'MASCULINO'
         ELSE 'OUTRO'    
     END AS sexoCliente
-    FROM tabelaclientes;";
+    FROM tbclientes;";
 
         $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 

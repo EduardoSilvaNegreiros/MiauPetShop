@@ -2,7 +2,7 @@
 * Inserir Clientes
 *
 * Esta seção do código é responsável por receber os dados do formulário e
-* inserir os mesmos na tabela tabelaclientes do banco de dados.
+* inserir os mesmos na tabela tbclientes do banco de dados.
 */ -->
 
 <header>
@@ -19,8 +19,8 @@ $sexoCliente = mysqli_real_escape_string($conexao, $_POST["sexoCliente"]); // Se
 $telefoneCliente = mysqli_real_escape_string($conexao, $_POST["telefoneCliente"]); // Telefone do cliente
 $enderecoCliente = mysqli_real_escape_string($conexao, $_POST["enderecoCliente"]); // Endereço do cliente
 
-// Constrói a instrução SQL para inserir os dados na tabela tabelaclientes
-$sql = "INSERT INTO tabelaclientes (
+// Constrói a instrução SQL para inserir os dados na tabela tbclientes
+$sql = "INSERT INTO tbclientes (
     nomeCliente, 
     emailCliente, 
     telefoneCliente, 
