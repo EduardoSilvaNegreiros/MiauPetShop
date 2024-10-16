@@ -97,7 +97,19 @@ include("../database/conexao.php");
                         break;
 
                     case 'cad-pets':
-                        include("../pages/pets/cad-pets.php");
+                        include("pets/cad-pets.php");
+                        break;
+
+                    case 'editar-pets':
+                        include("pets/editar-pets.php");
+                        break;
+
+                    case 'atualizar-pet':
+                        include("pets/atualizar-pet.php");
+                        break;
+
+                    case 'inserir-pets.php':
+                        include("pets/inserir-pets.php");
                         break;
 
                         // Valor padrão (caso não haja uma opção correspondente)
