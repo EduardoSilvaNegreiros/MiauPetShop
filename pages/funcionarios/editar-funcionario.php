@@ -17,7 +17,7 @@ $dados = mysqli_fetch_assoc($rs);
 
             <div class="input-box">
                 <label for="idFuncionario">ID</label>
-                <input type="text" name="idFuncionario" id="idFuncionario"  value="<?=$dados['idFuncionario']?>"> <!-- Campo para id -->
+                <input type="text" name="idFuncionario" id="idFuncionario"  value="<?=$dados['idFuncionario']?>" readonly> <!-- Campo para id -->
             </div>
 
             <div class="input-box">
