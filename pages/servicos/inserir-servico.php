@@ -20,9 +20,9 @@ $statusServico = mysqli_real_escape_string($conexao, $_POST["statusServico"]);
 // Montando a instrução SQL para inserir os dados na tabela tbservicos
 $sql = "INSERT INTO tbservicos (
     nomeServico, 
-    descricao, 
-    preco, 
-    duracao, 
+    descricaoServico, 
+    precoServico, 
+    duracaoServico, 
     status
 ) VALUES (
     '{$nomeServico}', 
@@ -32,10 +32,9 @@ $sql = "INSERT INTO tbservicos (
     '{$statusServico}'
 )";
 
-// Executando a consulta e lidando com erros
-if (mysqli_query($conexao, $sql)) {
-    echo "O registro foi inserido com sucesso!";
-} else {
-    die("Erro ao executar a consulta! " . mysqli_error($conexao));
-}
+// Executa a instrução SQL
+mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!. " . mysqli_error($conexao));
+
+// Caso ocorra tudo corretamente, aparecera está msg de sucesso
+echo "O registro foi inserido com sucesso!";
 ?>
