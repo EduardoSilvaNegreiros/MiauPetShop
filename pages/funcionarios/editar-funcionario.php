@@ -66,8 +66,8 @@ $dados = mysqli_fetch_assoc($rs);
                 <label for="statusFuncionario">Status Funcionário</label>
                 <select name="statusFuncionario" id="statusFuncionario" required>
                     <option value="">Selecione o status</option>
-                    <option value="Ativo">Ativo</option>
-                    <option value="Inativo">Inativo</option>
+                    <option value="Ativo" <?= ($dados['statusFuncionario'] == 'Ativo') ? 'selected' : '' ?>>Ativo</option>
+                    <option value="Inativo" <?= ($dados['statusFuncionario'] == 'Inativo') ? 'selected' : '' ?>>Inativo</option>
                 </select>
             </div>
 
