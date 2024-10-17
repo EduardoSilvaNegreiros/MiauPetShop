@@ -17,12 +17,15 @@
 
             <div class="input-box">
                 <label for="descricaoServico">Descrição</label>
-                <textarea name="descricaoServico" id="descricaoServico" required></textarea> <!-- Campo para descrição do serviço -->
+                <input type="text" name="descricaoServico" id="descricaoServico" required>
+                <!-- Campo para descrição do serviço atualizado para type="text" -->
             </div>
+
 
             <div class="input-box">
                 <label for="precoServico">Preço</label>
-                <input type="number" step="0.01" name="precoServico" id="precoServico" required> <!-- Campo para preço do serviço -->
+                <input type="number" step="0.01" name="precoServico" id="precoServico" required>
+                <!-- Campo para preço do serviço -->
             </div>
 
             <div class="input-box">
