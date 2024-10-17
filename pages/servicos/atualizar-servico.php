@@ -1,5 +1,5 @@
 <header>
-    <h3>Atualizar Serviço</h3>
+  <h3>Atualizar Serviço</h3>
 </header>
 
 <?php
@@ -14,10 +14,10 @@ $statusServico = mysqli_real_escape_string($conexao, $_POST["statusServico"]); /
 // Consulta para atualizar os dados do serviço
 $sql = "UPDATE tbservicos SET
     nomeServico = '{$nomeServico}',
-    descricao = '{$descricaoServico}',
-    preco = '{$precoServico}',
-    duracao = '{$duracaoServico}',
-    status = '{$statusServico}'
+    descricaoServico = '{$descricaoServico}',
+    precoServico = '{$precoServico}',
+    duracaoServico = '{$duracaoServico}',
+    statusServico = '{$statusServico}'
 WHERE idServico = '{$idServico}'";
 
 // Executando a consulta e lidando com erros
