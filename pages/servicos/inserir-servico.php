@@ -6,7 +6,7 @@
 */ -->
 
 <header>
-    <h3>Inserir Serviços</h3>
+  <h3>Inserir Serviços</h3>
 </header>
 
 <?php
@@ -23,7 +23,7 @@ $sql = "INSERT INTO tbservicos (
     descricaoServico, 
     precoServico, 
     duracaoServico, 
-    status
+    statusServico
 ) VALUES (
     '{$nomeServico}', 
     '{$descricaoServico}', 
