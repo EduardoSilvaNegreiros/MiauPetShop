@@ -18,7 +18,7 @@ $sql = "UPDATE tbservicos SET
     preco = '{$precoServico}',
     duracao = '{$duracaoServico}',
     status = '{$statusServico}'
-WHERE id = '{$idServico}'";
+WHERE idServico = '{$idServico}'";
 
 // Executando a consulta e lidando com erros
 mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
