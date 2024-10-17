@@ -78,9 +78,29 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
 
                     // Funcionalidades relacionadas aos serviços
                     case 'servicos':
-                        include("servicos.php");
+                        include("servicos/servicos.php");
                         break;
 
+                    case 'cad-servico':
+                        include("servicos/cad-servicos.php");
+                        break;
+
+                    case 'editar-servico':
+                        include("servicos/editar-servico.php");
+                        break;
+
+                    case 'atualizar-servico':
+                        include("servicos/atualizar-servico.php");
+                        break;
+
+                    case 'inserir-servicos':
+                        include("servicos/inserir-servico.php");
+                        break;
+
+                    case 'excluir-servico':
+                        include("servicos/excluir-servico.php");
+                        break;
+                    
                     // Funcionalidades relacionadas aos pets
                     case 'pets':
                         include("pets/pets.php");
