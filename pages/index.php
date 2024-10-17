@@ -81,7 +81,7 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                         include("servicos/servicos.php");
                         break;
 
-                    case 'cad-servico':
+                    case 'cad-servicos':
                         include("servicos/cad-servicos.php");
                         break;
 
