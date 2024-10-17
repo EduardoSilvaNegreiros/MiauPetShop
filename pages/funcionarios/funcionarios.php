@@ -1,9 +1,9 @@
 <header>
-    <h3>Funcionários</h3> 
+    <h3>Funcionários</h3>
 </header>
 
 <div>
-    <a href="index.php?menuop=cad-funcionarios">Novo Funcionário</a> 
+    <a href="index.php?menuop=cad-funcionarios">Novo Funcionário</a>
 </div>
 
 <table>
@@ -23,9 +23,9 @@
         </tr>
     </thead>
     <tbody>
-      
+
         <?php
-          $sql = "SELECT
+        $sql = "SELECT
           idFuncionario,
           upper(nomeFuncionario) AS nomeFuncionario,
           lower(emailFuncionario) AS emailFuncionario,
@@ -49,13 +49,16 @@
                 <td><?php echo $dados["telefoneFuncionario"] ?></td> <!-- Telefone do funcionário -->
                 <td><?php echo $dados["cargoFuncionario"] ?></td> <!-- Cargo do funcionário -->
                 <td><?php echo $dados["dataContratacao"] ?></td> <!-- Data de contratação do funcionário -->
-                <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td> <!-- Salário do funcionário formatado -->
+                <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td>
+                <!-- Salário do funcionário formatado -->
                 <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
-                <td><a href="index.php?menuop=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a></td>
-                <td><a href="index.php?menuop=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a></td>
+                <td><a href="index.php?menuop=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a>
+                </td>
+                <td><a href="index.php?menuop=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a>
+                </td>
             </tr>
         <?php
-        } 
+        }
         ?>
     </tbody>
 </table>

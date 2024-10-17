@@ -80,7 +80,8 @@
 
                     <div class="input-box">
                         <label for="confirmarSenha">Confirme sua senha</label>
-                        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Digite sua senha novamente" required />
+                        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Digite sua senha novamente"
+                            required />
                     </div>
 
                     <!-- Grupo de inputs para gênero -->

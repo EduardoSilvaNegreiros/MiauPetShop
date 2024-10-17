@@ -36,7 +36,7 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                 <?php
                 // Inclui a página correspondente ao valor de 'menuop'
                 switch ($menuop) {
-                    // Funcionalidades relacionadas aos funcionários
+                        // Funcionalidades relacionadas aos funcionários
                     case 'funcionarios':
                         include("funcionarios/funcionarios.php");
                         break;
@@ -56,7 +56,7 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                         include("funcionarios/excluir-funcionario.php");
                         break;
 
-                    // Funcionalidades relacionadas aos clientes
+                        // Funcionalidades relacionadas aos clientes
                     case 'clientes':
                         include("clientes/clientes.php");
                         break;
@@ -76,7 +76,7 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                         include("clientes/excluir-cliente.php");
                         break;
 
-                    // Funcionalidades relacionadas aos serviços
+                        // Funcionalidades relacionadas aos serviços
                     case 'servicos':
                         include("servicos/servicos.php");
                         break;
@@ -100,8 +100,8 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                     case 'excluir-servico':
                         include("servicos/excluir-servico.php");
                         break;
-                    
-                    // Funcionalidades relacionadas aos pets
+
+                        // Funcionalidades relacionadas aos pets
                     case 'pets':
                         include("pets/pets.php");
                         break;
@@ -121,7 +121,7 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                         include("pets/excluir-pet.php");
                         break;
 
-                    // Valor padrão (caso não haja uma opção correspondente)
+                        // Valor padrão (caso não haja uma opção correspondente)
                     default:
                         include("funcionarios/funcionarios.php");
                         break;

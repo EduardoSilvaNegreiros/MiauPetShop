@@ -2,7 +2,7 @@
     <h3>Excluir Pet</h3>
 </header>
 
-<?php 
+<?php
 $idPet = mysqli_real_escape_string($conexao, $_GET["idPet"]);
 $sql = "DELETE FROM tbpets WHERE idPet = '$idPet'";
 

@@ -1,5 +1,5 @@
 <header>
-  <h3>Atualizar Serviço</h3>
+    <h3>Atualizar Serviço</h3>
 </header>
 
 <?php
@@ -25,4 +25,3 @@ mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_err
 
 // Mensagem de sucesso
 echo "O registro foi atualizado com sucesso!";
-?>
