@@ -1,17 +1,41 @@
+<!-- /**
+* Inserir Serviços
+*
+* Esta seção do código é responsável por receber os dados do formulário e
+* inserir os mesmos na tabela tbservicos do banco de dados.
+*/ -->
+
 <header>
-    <h3>Inserir Servico</h3>
+    <h3>Inserir Serviços</h3>
 </header>
 
 <?php
-$nomeServico = mysqli_real_escape_string($conexao, $_POST["nomeServico"]); 
+// Recebendo e protegendo os dados do formulário contra SQL Injection
+$nomeServico = mysqli_real_escape_string($conexao, $_POST["nomeServico"]);
+$descricaoServico = mysqli_real_escape_string($conexao, $_POST["descricaoServico"]);
+$precoServico = mysqli_real_escape_string($conexao, $_POST["precoServico"]);
+$duracaoServico = mysqli_real_escape_string($conexao, $_POST["duracaoServico"]);
+$statusServico = mysqli_real_escape_string($conexao, $_POST["statusServico"]);
 
-$sql = "INSERT INTO Funcionarios (
+// Montando a instrução SQL para inserir os dados na tabela tbservicos
+$sql = "INSERT INTO tbservicos (
     nomeServico, 
+    descricao, 
+    preco, 
+    duracao, 
+    status
 ) VALUES (
     '{$nomeServico}', 
+    '{$descricaoServico}', 
+    '{$precoServico}', 
+    '{$duracaoServico}', 
+    '{$statusServico}'
 )";
 
-mysqli_query($conexao, $sql) or die("Erro ao executar a consulta! " . mysqli_error($conexao));
-
-echo "O registro foi inserido com sucesso!";
+// Executando a consulta e lidando com erros
+if (mysqli_query($conexao, $sql)) {
+    echo "O registro foi inserido com sucesso!";
+} else {
+    die("Erro ao executar a consulta! " . mysqli_error($conexao));
+}
 ?>
