@@ -1,31 +1,32 @@
 <header>
-    <h3>Clientes</h3> <!-- Título da seção -->
+  <h3>Clientes</h3> <!-- Título da seção -->
 </header>
 
 <div>
-    <a href="index.php?menuop=cad-clientes">Novo Cliente</a> <!-- Link para cadastro de novo cliente -->
+  <a href="index.php?menuop=cad-clientes" class="link-inserir">Novo Cliente</a>
+  <!-- Link para cadastro de novo cliente -->
 </div>
 
 <table>
 
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>E-mail</th>
-            <th>Telefone</th>
-            <th>Endereço</th>
-            <th>Sexo</th>
-            <th>Data de Nasc.</th>
-            <th>CPF</th>
-            <th>Edição</th>
-            <th>Excluir</th>
-        </tr>
-    </thead>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Telefone</th>
+      <th>Endereço</th>
+      <th>Sexo</th>
+      <th>Data de Nasc.</th>
+      <th>CPF</th>
+      <th>Edição</th>
+      <th>Excluir</th>
+    </tr>
+  </thead>
 
-    <tbody>
+  <tbody>
 
-        <?php
+    <?php
         $sql = "SELECT
         idCliente,
         upper(nomeCliente) AS nomeCliente,
@@ -45,20 +46,20 @@
 
         while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
         ?>
-            <tr>
-                <td><?php echo $dados["idCliente"] ?></td> <!-- ID do cliente -->
-                <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
-                <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
-                <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
-                <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
-                <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
-                <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
-                <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
-                <td><a href="index.php?menuop=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
-                <td><a href="index.php?menuop=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
-            </tr>
-        <?php
+    <tr>
+      <td><?php echo $dados["idCliente"] ?></td> <!-- ID do cliente -->
+      <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
+      <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
+      <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
+      <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
+      <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
+      <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
+      <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
+      <td><a href="index.php?menuop=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
+      <td><a href="index.php?menuop=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
+    </tr>
+    <?php
         } // Fim do loop
         ?>
-    </tbody>
+  </tbody>
 </table>

@@ -1,30 +1,30 @@
 <header>
-    <h3>Pets</h3> <!-- Título da seção -->
+  <h3>Pets</h3> <!-- Título da seção -->
 </header>
 
 <div>
-    <a href="index.php?menuop=cad-pets">Novo Pet</a> <!-- Link para cadastro de novo pet -->
+  <a href="index.php?menuop=cad-pets" class="link-inserir">Novo Pet</a> <!-- Link para cadastro de novo pet -->
 </div>
 
 <table>
 
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Tipo</th>
-            <th>Raça</th>
-            <th>Idade</th>
-            <th>Peso (kg)</th>
-            <th>Sexo</th>
-            <th>Edição</th>
-            <th>Excluir</th>
-        </tr>
-    </thead>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Tipo</th>
+      <th>Raça</th>
+      <th>Idade</th>
+      <th>Peso (kg)</th>
+      <th>Sexo</th>
+      <th>Edição</th>
+      <th>Excluir</th>
+    </tr>
+  </thead>
 
-    <tbody>
+  <tbody>
 
-        <?php
+    <?php
         $sql = "SELECT
         idPet,
         upper(nomePet) AS nomePet,
@@ -43,21 +43,21 @@
 
         while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
         ?>
-            <tr>
-                <td><?php echo $dados["idPet"] ?></td> <!-- ID do pet -->
-                <td><?php echo $dados["nomePet"] ?></td> <!-- Nome do pet -->
-                <td><?php echo $dados["tipoPet"] ?></td> <!-- Tipo do pet -->
-                <td><?php echo $dados["racaPet"] ?></td> <!-- Raça do pet -->
-                <td><?php echo $dados["idadePet"] ?></td> <!-- Idade do pet -->
-                <td><?php echo $dados["pesoPet"] ?></td> <!-- Peso do pet -->
-                <td><?php echo $dados["sexoPet"] ?></td> <!-- Sexo do pet -->
-                <td><a href="index.php?menuop=editar-pet&idPet=<?php echo $dados["idPet"] ?>">Editar</a></td>
-                <!-- Link para editar pet -->
-                <td><a href="index.php?menuop=excluir-pet&idPet=<?php echo $dados["idPet"] ?>">Excluir</a></td>
-                <!-- Link para excluir pet -->
-            </tr>
-        <?php
+    <tr>
+      <td><?php echo $dados["idPet"] ?></td> <!-- ID do pet -->
+      <td><?php echo $dados["nomePet"] ?></td> <!-- Nome do pet -->
+      <td><?php echo $dados["tipoPet"] ?></td> <!-- Tipo do pet -->
+      <td><?php echo $dados["racaPet"] ?></td> <!-- Raça do pet -->
+      <td><?php echo $dados["idadePet"] ?></td> <!-- Idade do pet -->
+      <td><?php echo $dados["pesoPet"] ?></td> <!-- Peso do pet -->
+      <td><?php echo $dados["sexoPet"] ?></td> <!-- Sexo do pet -->
+      <td><a href="index.php?menuop=editar-pet&idPet=<?php echo $dados["idPet"] ?>">Editar</a></td>
+      <!-- Link para editar pet -->
+      <td><a href="index.php?menuop=excluir-pet&idPet=<?php echo $dados["idPet"] ?>">Excluir</a></td>
+      <!-- Link para excluir pet -->
+    </tr>
+    <?php
         } // Fim do loop
         ?>
-    </tbody>
+  </tbody>
 </table>

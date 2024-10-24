@@ -134,12 +134,11 @@ body {
 .link-inserir {
   background-color: #6c63ff; /* Cor de fundo padrão */
   color: #fff; /* Cor do texto */
-  padding: 10px 15px;
+  padding: 5px 10px;
   border-radius: 5px;
   text-decoration: none; /* Remove sublinhado */
   display: inline-block; /* Para que o padding funcione corretamente */
   font-weight: bold; /* Deixa o texto em negrito */
-  transition: background-color 0.3s ease; /* Transição ao passar o mouse */
 }
 
 .link-inserir:hover {

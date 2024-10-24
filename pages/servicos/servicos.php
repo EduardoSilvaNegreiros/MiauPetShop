@@ -3,7 +3,8 @@
 </header>
 
 <div>
-  <a href="index.php?menuop=cad-servicos">Novo Serviço</a> <!-- Link para cadastro de novo serviço -->
+  <a href="index.php?menuop=cad-servicos" class="link-inserir">Novo Serviço</a>
+  <!-- Link para cadastro de novo serviço -->
 </div>
 
 <table>
@@ -42,16 +43,16 @@
     // Loop para percorrer os resultados
     while ($dados = mysqli_fetch_assoc($rs)) {
     ?>
-      <tr>
-        <td><?php echo $dados["idServico"] ?></td> <!-- ID do serviço -->
-        <td><?php echo $dados["nomeServico"] ?></td> <!-- Nome do serviço -->
-        <td><?php echo $dados["descricaoServico"] ?></td> <!-- Descrição do serviço -->
-        <td><?php echo $dados["precoServico"] ?></td> <!-- Preço do serviço -->
-        <td><?php echo $dados["duracaoServico"] ?></td> <!-- Duração do serviço -->
-        <td><?php echo $dados["statusServico"] ?></td> <!-- Status do serviço -->
-        <td><a href="index.php?menuop=editar-servico&idServico=<?php echo $dados["idServico"] ?>">Editar</a></td>
-        <td><a href="index.php?menuop=excluir-servico&idServico=<?php echo $dados["idServico"] ?>">Excluir</a></td>
-      </tr>
+    <tr>
+      <td><?php echo $dados["idServico"] ?></td> <!-- ID do serviço -->
+      <td><?php echo $dados["nomeServico"] ?></td> <!-- Nome do serviço -->
+      <td><?php echo $dados["descricaoServico"] ?></td> <!-- Descrição do serviço -->
+      <td><?php echo $dados["precoServico"] ?></td> <!-- Preço do serviço -->
+      <td><?php echo $dados["duracaoServico"] ?></td> <!-- Duração do serviço -->
+      <td><?php echo $dados["statusServico"] ?></td> <!-- Status do serviço -->
+      <td><a href="index.php?menuop=editar-servico&idServico=<?php echo $dados["idServico"] ?>">Editar</a></td>
+      <td><a href="index.php?menuop=excluir-servico&idServico=<?php echo $dados["idServico"] ?>">Excluir</a></td>
+    </tr>
     <?php
     } // Fim do loop
     ?>
