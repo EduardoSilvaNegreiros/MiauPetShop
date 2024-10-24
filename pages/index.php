@@ -29,13 +29,12 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
           <a href="index.php?menuop=servicos" class="nav-link">Serviços</a>
           <a href="index.php?menuop=pets" class="nav-link">Pets</a>
         </nav>
-      </header>
-
-      <!-- Botão de logout -->
-      <form action="../process/logout.php" method="POST" style="display:inline;">
-        <button type="submit" class="nav-exit">Sair</button>
-      </form>
-      </nav>
+        s
+        <!-- Botão de logout -->
+        <form action="../process/logout.php" method="POST" style="display:inline;">
+          <button type="submit" class="nav-exit">Sair</button>
+        </form>
+        </nav>
       </header>
 
       <!-- Conteúdo principal -->
