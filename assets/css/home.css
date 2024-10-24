@@ -131,6 +131,26 @@ body {
   outline: 2px dashed red; /* Destaque ao focar */
 }
 
+.link-inserir {
+  background-color: #6c63ff; /* Cor de fundo padrão */
+  color: #fff; /* Cor do texto */
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove sublinhado */
+  display: inline-block; /* Para que o padding funcione corretamente */
+  font-weight: bold; /* Deixa o texto em negrito */
+  transition: background-color 0.3s ease; /* Transição ao passar o mouse */
+}
+
+.link-inserir:hover {
+  background-color: #5a52d1; /* Cor ao passar o mouse */
+}
+
+.link-inserir:focus {
+  outline: 2px dashed #6c63ff; /* Destaque ao focar */
+}
+
+
 /* Estilos Para Tabelas */
 .table-container {
   width: 100%;
