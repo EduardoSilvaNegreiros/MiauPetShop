@@ -113,6 +113,24 @@ body {
   outline: 2px dashed #6c63ff; /* Destaque ao focar */
 }
 
+/* Estilo para o botão Sair */
+.nav-exit {
+  background-color: red; /* Cor de fundo vermelha */
+  color: #fff; /* Cor do texto */
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none; /* Remove sublinhado */
+  border: none; /* Remove borda padrão */
+}
+
+.nav-exit:hover {
+  background-color: darkred; /* Cor ao passar o mouse */
+}
+
+.nav-exit:focus {
+  outline: 2px dashed red; /* Destaque ao focar */
+}
+
 /* Estilos Para Tabelas */
 .table-container {
   width: 100%;
