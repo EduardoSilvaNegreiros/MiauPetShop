@@ -1,5 +1,4 @@
 <?php
-// Inicia a sessão
 session_start();
 
 // Verifica se a sessão existe, então destrói
@@ -14,4 +13,3 @@ if (isset($_SESSION['usuario'])) {
 // Redireciona o usuário para a página de login ou sobre após o logout
 header("Location: ../index.html");
 exit;
-?>

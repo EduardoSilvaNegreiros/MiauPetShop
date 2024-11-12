@@ -27,7 +27,7 @@
   <tbody>
 
     <?php
-        $sql = "SELECT
+    $sql = "SELECT
         idCliente,
         upper(nomeCliente) AS nomeCliente,
         lower(emailCliente) AS emailCliente,
@@ -42,24 +42,24 @@
     END AS sexoCliente
     FROM tbclientes;";
 
-        $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
+    $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 
-        while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
-        ?>
-    <tr>
-      <td><?php echo $dados["idCliente"] ?></td> <!-- ID do cliente -->
-      <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
-      <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
-      <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
-      <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
-      <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
-      <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
-      <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
-      <td><a href="index.php?menuop=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
-      <td><a href="index.php?menuop=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
-    </tr>
+    while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
+    ?>
+      <tr>
+        <td><?php echo $dados["idCliente"] ?></td> <!-- ID do cliente -->
+        <td><?php echo $dados["nomeCliente"] ?></td> <!-- Nome do cliente -->
+        <td><?php echo $dados["emailCliente"] ?></td> <!-- E-mail do cliente -->
+        <td><?php echo $dados["telefoneCliente"] ?></td> <!-- Telefone do cliente -->
+        <td><?php echo $dados["enderecoCliente"] ?></td> <!-- Endereço do cliente -->
+        <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
+        <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
+        <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
+        <td><a href="index.php?menuop=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
+        <td><a href="index.php?menuop=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
+      </tr>
     <?php
-        } // Fim do loop
-        ?>
+    } // Fim do loop
+    ?>
   </tbody>
 </table>

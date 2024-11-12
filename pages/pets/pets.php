@@ -25,7 +25,7 @@
   <tbody>
 
     <?php
-        $sql = "SELECT
+    $sql = "SELECT
         idPet,
         upper(nomePet) AS nomePet,
         upper(tipoPet) AS tipoPet,
@@ -39,25 +39,25 @@
     END AS sexoPet
     FROM tbpets;";
 
-        $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
+    $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 
-        while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
-        ?>
-    <tr>
-      <td><?php echo $dados["idPet"] ?></td> <!-- ID do pet -->
-      <td><?php echo $dados["nomePet"] ?></td> <!-- Nome do pet -->
-      <td><?php echo $dados["tipoPet"] ?></td> <!-- Tipo do pet -->
-      <td><?php echo $dados["racaPet"] ?></td> <!-- Raça do pet -->
-      <td><?php echo $dados["idadePet"] ?></td> <!-- Idade do pet -->
-      <td><?php echo $dados["pesoPet"] ?></td> <!-- Peso do pet -->
-      <td><?php echo $dados["sexoPet"] ?></td> <!-- Sexo do pet -->
-      <td><a href="index.php?menuop=editar-pet&idPet=<?php echo $dados["idPet"] ?>">Editar</a></td>
-      <!-- Link para editar pet -->
-      <td><a href="index.php?menuop=excluir-pet&idPet=<?php echo $dados["idPet"] ?>">Excluir</a></td>
-      <!-- Link para excluir pet -->
-    </tr>
+    while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
+    ?>
+      <tr>
+        <td><?php echo $dados["idPet"] ?></td> <!-- ID do pet -->
+        <td><?php echo $dados["nomePet"] ?></td> <!-- Nome do pet -->
+        <td><?php echo $dados["tipoPet"] ?></td> <!-- Tipo do pet -->
+        <td><?php echo $dados["racaPet"] ?></td> <!-- Raça do pet -->
+        <td><?php echo $dados["idadePet"] ?></td> <!-- Idade do pet -->
+        <td><?php echo $dados["pesoPet"] ?></td> <!-- Peso do pet -->
+        <td><?php echo $dados["sexoPet"] ?></td> <!-- Sexo do pet -->
+        <td><a href="index.php?menuop=editar-pet&idPet=<?php echo $dados["idPet"] ?>">Editar</a></td>
+        <!-- Link para editar pet -->
+        <td><a href="index.php?menuop=excluir-pet&idPet=<?php echo $dados["idPet"] ?>">Excluir</a></td>
+        <!-- Link para excluir pet -->
+      </tr>
     <?php
-        } // Fim do loop
-        ?>
+    } // Fim do loop
+    ?>
   </tbody>
 </table>

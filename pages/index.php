@@ -1,4 +1,13 @@
 <?php
+session_start();  // Inicia a sessão
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
+    // Se não estiver logado, redireciona para a página de login
+    header("Location: ../index.html");
+    exit(); // Impede que o restante do código seja executado
+}
+
 // Conexão com o banco de dados
 include("../database/conexao.php");
 
@@ -10,36 +19,36 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../assets/css/home.css" />
-  <title>Sobre - Pet Shop</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+    <title>Sobre - Pet Shop</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="content">
+    <div class="container">
+        <div class="content">
 
-      <!-- Cabeçalho com navegação -->
-      <header class="header">
-        <h1>Pet Shop</h1>
-        <nav>
-          <a href="index.php?menuop=funcionarios" class="nav-link">Funcionários</a>
-          <a href="index.php?menuop=clientes" class="nav-link">Clientes</a>
-          <a href="index.php?menuop=servicos" class="nav-link">Serviços</a>
-          <a href="index.php?menuop=pets" class="nav-link">Pets</a>
-        </nav>
+            <!-- Cabeçalho com navegação -->
+            <header class="header">
+                <h1>Pet Shop</h1>
+                <nav>
+                    <a href="index.php?menuop=funcionarios" class="nav-link">Funcionários</a>
+                    <a href="index.php?menuop=clientes" class="nav-link">Clientes</a>
+                    <a href="index.php?menuop=servicos" class="nav-link">Serviços</a>
+                    <a href="index.php?menuop=pets" class="nav-link">Pets</a>
+                </nav>
 
-        <!-- Botão de logout -->
-        <form action="../process/logout.php" method="POST">
-          <button type="submit" class="nav-exit">Sair</button>
-        </form>
-        </nav>
-      </header>
+                <!-- Botão de logout -->
+                <form action="../process/logout.php" method="POST">
+                    <button type="submit" class="nav-exit">Sair</button>
+                </form>
+                </nav>
+            </header>
 
-      <!-- Conteúdo principal -->
-      <main>
-        <?php
+            <!-- Conteúdo principal -->
+            <main>
+                <?php
                 // Inclui a página correspondente ao valor de 'menuop'
                 switch ($menuop) {
                         // Funcionalidades relacionadas aos funcionários
@@ -133,10 +142,10 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
                         break;
                 }
                 ?>
-      </main>
+            </main>
 
+        </div>
     </div>
-  </div>
 </body>
 
 </html>

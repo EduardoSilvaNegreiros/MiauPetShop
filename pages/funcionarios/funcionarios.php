@@ -25,7 +25,7 @@
   <tbody>
 
     <?php
-        $sql = "SELECT
+    $sql = "SELECT
           idFuncionario,
           upper(nomeFuncionario) AS nomeFuncionario,
           lower(emailFuncionario) AS emailFuncionario,
@@ -37,28 +37,30 @@
           statusFuncionario
       FROM tbfuncionarios;";
 
-        $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
+    $rs = mysqli_query($conexao, $sql) or die("Erro ao executar a consulta!" . mysqli_error($conexao)); // Executa a consulta
 
-        while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
-        ?>
-    <tr>
-      <td><?php echo $dados["idFuncionario"] ?></td> <!-- ID do funcionário -->
-      <td><?php echo $dados["nomeFuncionario"] ?></td> <!-- Nome do funcionário -->
-      <td><?php echo $dados["cpfFuncionario"] ?></td>
-      <td><?php echo $dados["emailFuncionario"] ?></td> <!-- E-mail do funcionário -->
-      <td><?php echo $dados["telefoneFuncionario"] ?></td> <!-- Telefone do funcionário -->
-      <td><?php echo $dados["cargoFuncionario"] ?></td> <!-- Cargo do funcionário -->
-      <td><?php echo $dados["dataContratacao"] ?></td> <!-- Data de contratação do funcionário -->
-      <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td>
-      <!-- Salário do funcionário formatado -->
-      <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
-      <td><a href="index.php?menuop=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a>
-      </td>
-      <td><a href="index.php?menuop=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a>
-      </td>
-    </tr>
+    while ($dados = mysqli_fetch_assoc($rs)) { // Loop para percorrer os resultados
+    ?>
+      <tr>
+        <td><?php echo $dados["idFuncionario"] ?></td> <!-- ID do funcionário -->
+        <td><?php echo $dados["nomeFuncionario"] ?></td> <!-- Nome do funcionário -->
+        <td><?php echo $dados["cpfFuncionario"] ?></td>
+        <td><?php echo $dados["emailFuncionario"] ?></td> <!-- E-mail do funcionário -->
+        <td><?php echo $dados["telefoneFuncionario"] ?></td> <!-- Telefone do funcionário -->
+        <td><?php echo $dados["cargoFuncionario"] ?></td> <!-- Cargo do funcionário -->
+        <td><?php echo $dados["dataContratacao"] ?></td> <!-- Data de contratação do funcionário -->
+        <td><?php echo number_format($dados["salarioFuncionario"], 2, ',', '.') ?></td>
+
+        <!-- Salário do funcionário formatado -->
+        <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
+
+        <td><a href="index.php?menuop=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a>
+        </td>
+        <td><a href="index.php?menuop=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a>
+        </td>
+      </tr>
     <?php
-        }
-        ?>
+    }
+    ?>
   </tbody>
 </table>

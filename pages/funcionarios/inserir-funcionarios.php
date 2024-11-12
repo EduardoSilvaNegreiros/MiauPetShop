@@ -12,6 +12,7 @@ $cargoFuncionario = mysqli_real_escape_string($conexao, $_POST["cargoFuncionario
 $dataContratacao = mysqli_real_escape_string($conexao, $_POST["dataContratacao"]); // Data de contratação
 $salarioFuncionario = mysqli_real_escape_string($conexao, $_POST["salarioFuncionario"]); // Salário do funcionário
 $statusFuncionario = mysqli_real_escape_string($conexao, $_POST["statusFuncionario"]); // Status do funcionário
+
 // Constrói a instrução SQL para inserir os dados na tabela Funcionarios
 $sql = "INSERT INTO tbfuncionarios (
     nomeFuncionario, 
