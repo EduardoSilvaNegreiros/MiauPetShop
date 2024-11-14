@@ -34,7 +34,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id'] = $usuario['id']; // Armazena o ID do usuário
             $_SESSION['user_name'] = $usuario['primeiroNome']; // Armazena o nome do usuário
             $_SESSION['usuario'] = $usuario; // Armazena os dados completos do usuário (se necessário)
-            $_SESSION['mensagem_sucesso'] = "Login realizado com sucesso."; // Mensagem de sucesso
 
             // Redireciona para a página principal após o login
             header("Location: ../pages/index.php"); // Página principal
