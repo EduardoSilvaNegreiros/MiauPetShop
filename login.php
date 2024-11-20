@@ -57,10 +57,10 @@
                         <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
                     </div>
 
-                    <!-- Link para recuperação de senha -->
+                    <!-- Link para recuperação de senha
                     <div class="forgot-password">
                         <a href="#">Esqueceu sua senha?</a>
-                    </div>
+                    </div> -->
 
                     <!-- Botão de login -->
                     <div class="login-button">
