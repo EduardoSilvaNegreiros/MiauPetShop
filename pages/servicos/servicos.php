@@ -3,7 +3,7 @@
 </header>
 
 <div>
-  <a href="index.php?menuop=cad-servicos" class="link-inserir">Novo Serviço</a>
+  <a href="index.php?menu=cad-servicos" class="link-inserir">Novo Serviço</a>
   <!-- Link para cadastro de novo serviço -->
 </div>
 
@@ -14,7 +14,7 @@
       <th>Nome</th>
       <th>Descrição</th>
       <th>Preço</th>
-      <th>Duração</th>
+      <th>Duração (em horas)</th>
       <th>Status</th>
       <th>Edição</th>
       <th>Excluir</th>
@@ -50,8 +50,8 @@
         <td><?php echo $dados["precoServico"] ?></td> <!-- Preço do serviço -->
         <td><?php echo $dados["duracaoServico"] ?></td> <!-- Duração do serviço -->
         <td><?php echo $dados["statusServico"] ?></td> <!-- Status do serviço -->
-        <td><a href="index.php?menuop=editar-servico&idServico=<?php echo $dados["idServico"] ?>">Editar</a></td>
-        <td><a href="index.php?menuop=excluir-servico&idServico=<?php echo $dados["idServico"] ?>">Excluir</a></td>
+        <td><a href="index.php?menu=editar-servico&idServico=<?php echo $dados["idServico"] ?>">Editar</a></td>
+        <td><a href="index.php?menu=excluir-servico&idServico=<?php echo $dados["idServico"] ?>">Excluir</a></td>
       </tr>
     <?php
     } // Fim do loop

@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
     $confirmarSenha = $_POST['confirmarSenha'];
-    $genero = $_POST['genero']; 
+    $genero = $_POST['genero'];
 
     // Verifica se a senha e a confirmação são iguais
     if ($senha !== $confirmarSenha) {
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // SQL para inserir dados no banco de dados
     $sql = "INSERT INTO tbusuarios (primeiroNome, segundoNome, email, telefone, senha, genero) VALUES (?, ?, ?, ?, ?, ?)";
-    
+
     // Preparar e executar a consulta
     $stmt = $conexao->prepare($sql);
     $stmt->bind_param("ssssss", $primeiro_nome, $sobrenome, $email, $telefone, $senhaCriptografada, $genero);
@@ -50,4 +50,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Método de requisição inválido.";
 }
-?>

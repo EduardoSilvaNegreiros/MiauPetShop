@@ -14,7 +14,7 @@
 
         <!-- Imagem do logo -->
         <div class="form-image">
-            <img src="assets/img/logo-miau-pet-1.svg" alt="imagemPetShop" />
+            <img src="assets/img/LOGOFINAL.jpg" alt="imagemPetShop" />
         </div>
 
         <!-- Formulário de cadastro -->

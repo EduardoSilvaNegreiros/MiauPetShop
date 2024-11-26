@@ -15,7 +15,7 @@
 
         <!-- Seção de imagem do logo -->
         <div class="form-image">
-            <img src="assets/img/logo-miau-pet-1.svg" alt="imagemPetShop" />
+            <img src="assets/img/LOGOFINAL.jpg" alt="imagemPetShop" />
         </div>
 
         <!-- Formulário de login -->
@@ -30,7 +30,7 @@
 
                 <!-- Exibir mensagens de erro ou sucesso -->
                 <?php
-                session_start(); // Inicia a sessão
+                session_start();
 
                 // Exibir mensagens de erro
                 if (isset($_SESSION['mensagem_erro'])) {
@@ -57,11 +57,6 @@
                         <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
                     </div>
 
-                    <!-- Link para recuperação de senha
-                    <div class="forgot-password">
-                        <a href="#">Esqueceu sua senha?</a>
-                    </div> -->
-
                     <!-- Botão de login -->
                     <div class="login-button">
                         <button type="submit">Entrar</button>
@@ -79,5 +74,7 @@
         </div>
     </div>
 </body>
+
+
 
 </html>

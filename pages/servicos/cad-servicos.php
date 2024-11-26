@@ -2,7 +2,7 @@
     <h3>Cadastro de Serviço</h3> <!-- Título do formulário -->
 </header>
 
-<form action="index.php?menuop=inserir-servicos" method="POST" class="form">
+<form action="index.php?menu=inserir-servicos" method="POST" class="form">
 
     <!-- Início do formulário -->
     <div class="input-group">

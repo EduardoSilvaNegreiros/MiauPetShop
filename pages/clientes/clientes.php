@@ -3,7 +3,7 @@
 </header>
 
 <div>
-  <a href="index.php?menuop=cad-clientes" class="link-inserir">Novo Cliente</a>
+  <a href="index.php?menu=cad-clientes" class="link-inserir">Novo Cliente</a>
   <!-- Link para cadastro de novo cliente -->
 </div>
 
@@ -55,8 +55,8 @@
         <td><?php echo $dados["sexoCliente"] ?></td> <!-- Sexo do cliente -->
         <td><?php echo $dados["dataNascCliente"] ?></td> <!-- Data de nascimento do cliente -->
         <td><?php echo $dados["cpfCliente"] ?></td> <!-- CPF do cliente -->
-        <td><a href="index.php?menuop=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
-        <td><a href="index.php?menuop=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
+        <td><a href="index.php?menu=editar-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Editar</a></td>
+        <td><a href="index.php?menu=excluir-cliente&idCliente=<?php echo $dados["idCliente"] ?>">Excluir</a></td>
       </tr>
     <?php
     } // Fim do loop

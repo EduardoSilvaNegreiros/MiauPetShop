@@ -11,8 +11,8 @@ if (!isset($_SESSION['user_id']) || !isset($_SESSION['user_name'])) {
 // Conexão com o banco de dados
 include("../database/conexao.php");
 
-// Definindo o valor padrão para o parâmetro 'menuop'
-$menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor padrão modificado para 'funcionarios'
+// Definindo o valor padrão para o parâmetro 'menu'
+$menu = isset($_GET["menu"]) ? $_GET["menu"] : 'funcionarios'; // Valor padrão modificado para 'funcionarios'
 ?>
 
 <!DOCTYPE html>
@@ -33,10 +33,10 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
             <header class="header">
                 <h1>Pet Shop</h1>
                 <nav>
-                    <a href="index.php?menuop=funcionarios" class="nav-link">Funcionários</a>
-                    <a href="index.php?menuop=clientes" class="nav-link">Clientes</a>
-                    <a href="index.php?menuop=servicos" class="nav-link">Serviços</a>
-                    <a href="index.php?menuop=pets" class="nav-link">Pets</a>
+                    <a href="index.php?menu=funcionarios" class="nav-link">Funcionários</a>
+                    <a href="index.php?menu=clientes" class="nav-link">Clientes</a>
+                    <a href="index.php?menu=servicos" class="nav-link">Serviços</a>
+                    <a href="index.php?menu=pets" class="nav-link">Pets</a>
                 </nav>
 
                 <!-- Botão de logout -->
@@ -49,8 +49,8 @@ $menuop = isset($_GET["menuop"]) ? $_GET["menuop"] : 'funcionarios'; // Valor pa
             <!-- Conteúdo principal -->
             <main>
                 <?php
-                // Inclui a página correspondente ao valor de 'menuop'
-                switch ($menuop) {
+                // Inclui a página correspondente ao valor de 'menu'
+                switch ($menu) {
                         // Funcionalidades relacionadas aos funcionários
                     case 'funcionarios':
                         include("funcionarios/funcionarios.php");

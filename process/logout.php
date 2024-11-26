@@ -10,6 +10,8 @@ if (isset($_SESSION['usuario'])) {
     session_destroy();
 }
 
+
+
 // Redireciona o usuário para a página de login ou sobre após o logout
 header("Location: ../index.html");
 exit;

@@ -2,7 +2,7 @@
     <h3>Cadastro de Funcionário</h3> <!-- Título do formulário -->
 </header>
 
-<form action="index.php?menuop=inserir-funcionarios" method="POST" class="form">
+<form action="index.php?menu=inserir-funcionarios" method="POST" class="form">
 
     <!-- Início do formulário -->
     <div class="input-group">

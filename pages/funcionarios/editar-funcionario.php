@@ -9,7 +9,7 @@ $dados = mysqli_fetch_assoc($rs);
     <h3>Editar Funcionário</h3>
 </header>
 
-<form action="index.php?menuop=atualizar-funcionario" method="POST" class="form">
+<form action="index.php?menu=atualizar-funcionario" method="POST" class="form">
 
     <div class="input-group">
 

@@ -9,7 +9,7 @@ $dados = mysqli_fetch_assoc($rs);
     <h3>Editar Cliente</h3>
 </header>
 
-<form action="index.php?menuop=atualizar-cliente" method="POST" class="form">
+<form action="index.php?menu=atualizar-cliente" method="POST" class="form">
 
     <div class="input-group">
 
@@ -47,11 +47,12 @@ $dados = mysqli_fetch_assoc($rs);
             <label for="sexoCliente">Sexo</label>
             <select name="sexoCliente" id="sexoCliente" required>
                 <option value="" disabled>Selecione</option>
-                <option value="masculino" <?= ($dados['sexoCliente'] == 'masculino') ? 'selected' : '' ?>>Masculino</option>
-                <option value="feminino" <?= ($dados['sexoCliente'] == 'feminino') ? 'selected' : '' ?>>Feminino</option>
-                <option value="outro" <?= ($dados['sexoCliente'] == 'outro') ? 'selected' : '' ?>>Outro</option>
+                <option value="M" <?= ($dados['sexoCliente'] == 'M') ? 'selected' : '' ?>>Masculino</option>
+                <option value="F" <?= ($dados['sexoCliente'] == 'F') ? 'selected' : '' ?>>Feminino</option>
+                <option value="O" <?= ($dados['sexoCliente'] == 'O') ? 'selected' : '' ?>>Outro</option>
             </select>
         </div>
+
 
         <div class="input-box">
             <label for="dataNascCliente">Data de Nascimento</label>

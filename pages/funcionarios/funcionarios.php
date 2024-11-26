@@ -3,7 +3,7 @@
 </header>
 
 <div>
-  <a href="index.php?menuop=cad-funcionarios" class="link-inserir">Novo Funcionário</a>
+  <a href="index.php?menu=cad-funcionarios" class="link-inserir">Novo Funcionário</a>
 </div>
 
 <table>
@@ -54,9 +54,9 @@
         <!-- Salário do funcionário formatado -->
         <td><?php echo $dados["statusFuncionario"] ?></td> <!-- Status do funcionário -->
 
-        <td><a href="index.php?menuop=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a>
+        <td><a href="index.php?menu=editar-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Editar</a>
         </td>
-        <td><a href="index.php?menuop=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a>
+        <td><a href="index.php?menu=excluir-funcionario&idFuncionario=<?php echo $dados["idFuncionario"] ?>">Excluir</a>
         </td>
       </tr>
     <?php

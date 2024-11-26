@@ -1,8 +1,8 @@
 <header class="form-header">
-    <h3>Cadastro de Contato</h3> <!-- Título do formulário -->
+    <h3>Cadastro de Cliente</h3> <!-- Título do formulário -->
 </header>
 
-<form action="index.php?menuop=inserir-clientes" method="POST" class="form">
+<form action="index.php?menu=inserir-clientes" method="POST" class="form">
 
     <!-- Início do formulário -->
     <div class="input-group">
@@ -33,8 +33,14 @@
 
             <div class="input-box">
                 <label for="sexoCliente">Sexo</label>
-                <input type="text" name="sexoCliente" id="sexoCliente">
+                <select name="sexoCliente" id="sexoCliente" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                    <option value="O">Outro</option>
+                </select>
             </div>
+
 
             <div class="input-box">
                 <label for="dataNascCliente">Data de Nascimento</label>

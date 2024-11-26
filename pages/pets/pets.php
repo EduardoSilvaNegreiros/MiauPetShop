@@ -3,7 +3,7 @@
 </header>
 
 <div>
-  <a href="index.php?menuop=cad-pets" class="link-inserir">Novo Pet</a> <!-- Link para cadastro de novo pet -->
+  <a href="index.php?menu=cad-pets" class="link-inserir">Novo Pet</a> <!-- Link para cadastro de novo pet -->
 </div>
 
 <table>
@@ -51,9 +51,9 @@
         <td><?php echo $dados["idadePet"] ?></td> <!-- Idade do pet -->
         <td><?php echo $dados["pesoPet"] ?></td> <!-- Peso do pet -->
         <td><?php echo $dados["sexoPet"] ?></td> <!-- Sexo do pet -->
-        <td><a href="index.php?menuop=editar-pet&idPet=<?php echo $dados["idPet"] ?>">Editar</a></td>
+        <td><a href="index.php?menu=editar-pet&idPet=<?php echo $dados["idPet"] ?>">Editar</a></td>
         <!-- Link para editar pet -->
-        <td><a href="index.php?menuop=excluir-pet&idPet=<?php echo $dados["idPet"] ?>">Excluir</a></td>
+        <td><a href="index.php?menu=excluir-pet&idPet=<?php echo $dados["idPet"] ?>">Excluir</a></td>
         <!-- Link para excluir pet -->
       </tr>
     <?php

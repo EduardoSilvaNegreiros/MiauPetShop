@@ -9,7 +9,7 @@ $dados = mysqli_fetch_assoc($rs);
     <h3>Editar Pet</h3>
 </header>
 
-<form action="index.php?menuop=atualizar-pet" method="POST" class="form">
+<form action="index.php?menu=atualizar-pet" method="POST" class="form">
 
     <div class="input-group">
 

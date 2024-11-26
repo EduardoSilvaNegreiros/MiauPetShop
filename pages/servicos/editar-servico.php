@@ -14,7 +14,7 @@ $dados = mysqli_fetch_assoc($rs);
     <h3>Editar Serviço</h3>
 </header>
 
-<form action="index.php?menuop=atualizar-servico" method="POST" class="form">
+<form action="index.php?menu=atualizar-servico" method="POST" class="form">
     <div class="input-group">
 
         <!-- Campo ID (readonly) -->
