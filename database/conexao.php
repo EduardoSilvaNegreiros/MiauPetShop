@@ -4,7 +4,8 @@ include("config.php");
 $conexao = mysqli_connect(SERVIDOR, USUARIO, SENHA, BANCO) or die("Erro na conexão: " . mysqli_connect_error());
 
 // Função para criar tabelas se elas não existirem
-function criarTabelas($conexao) {
+function criarTabelas($conexao)
+{
     // SQL para criar a tabela tbfuncionarios
     $sqlFuncionarios = "CREATE TABLE IF NOT EXISTS tbfuncionarios (
         idFuncionario INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,7 +57,8 @@ function criarTabelas($conexao) {
     if (mysqli_query($conexao, $sqlFuncionarios)) {
         echo "Tabela tbfuncionarios criada com sucesso!<br>";
     } else {
-        echo "Erro ao criar a tabela tbfuncionarios: " . mysqli_error($conexao) . "<br>";
+        echo "Erro ao criar a t
+        abela tbfuncionarios: " . mysqli_error($conexao) . "<br>";
     }
 
     if (mysqli_query($conexao, $sqlClientes)) {
@@ -78,9 +80,9 @@ function criarTabelas($conexao) {
     }
 }
 
+
 // Chama a função para criar as tabelas
 criarTabelas($conexao);
 
 // Fecha a conexão
 mysqli_close($conexao);
-?>
