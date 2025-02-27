@@ -41,6 +41,15 @@ O sistema foi desenvolvido para ajudar donos de pet shops a gerenciar e organiza
 
 A plataforma foi projetada com foco em simplicidade e usabilidade, garantindo uma experiência de usuário intuitiva. O design responsivo permite que o sistema seja acessado de diversos dispositivos, como desktops, tablets e smartphones, sem perder a funcionalidade.
 
+### **Telaprincipal**
+![Tela Principal](https://github.com/EduardoSilvaNegreiros/MiauPetShop/blob/main/telaprincipal.png?raw=true)
+
+### **Cadastro**
+![Cadastro](https://github.com/EduardoSilvaNegreiros/MiauPetShop/blob/main/cadastro.png?raw=true)
+
+### **Login**
+![Login](https://github.com/EduardoSilvaNegreiros/MiauPetShop/blob/main/login.png?raw=true)
+
 ---
 
 ## Entre em Contato
