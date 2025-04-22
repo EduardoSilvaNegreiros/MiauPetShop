@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Gera token CSRF se ainda não existir
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -10,43 +19,32 @@
 
 <body>
 
-    <!-- Container principal -->
     <div class="container">
-
-        <!-- Seção de imagem do logo -->
         <div class="form-image">
             <img src="assets/img/LOGOFINAL.jpg" alt="imagemPetShop" />
         </div>
 
-        <!-- Formulário de login -->
         <div class="form">
             <form action="./process/process_login.php" method="POST">
-
                 <div class="form-header">
                     <div class="title">
                         <h1>Login</h1>
                     </div>
                 </div>
 
-
-                <!-- Exibir mensagens de erro ou sucesso -->
                 <?php
-                session_start();
-
-                // Exibir mensagens de erro
+                // Exibir mensagens com escape pra evitar XSS
                 if (isset($_SESSION['mensagem_erro'])) {
-                    echo '<div class="alert alert-danger">' . $_SESSION['mensagem_erro'] . '</div>';
-                    unset($_SESSION['mensagem_erro']); // Limpa a mensagem após exibi-la
+                    echo '<div class="alert alert-danger">' . htmlspecialchars($_SESSION['mensagem_erro']) . '</div>';
+                    unset($_SESSION['mensagem_erro']);
                 }
 
-                // Exibir mensagens de sucesso
                 if (isset($_SESSION['mensagem_sucesso'])) {
-                    echo '<div class="alert alert-success">' . $_SESSION['mensagem_sucesso'] . '</div>';
-                    unset($_SESSION['mensagem_sucesso']); // Limpa a mensagem após exibi-la
+                    echo '<div class="alert alert-success">' . htmlspecialchars($_SESSION['mensagem_sucesso']) . '</div>';
+                    unset($_SESSION['mensagem_sucesso']);
                 }
                 ?>
 
-                <!-- Campos de e-mail e senha -->
                 <div class="input-group">
                     <div class="input-box">
                         <label for="email">Seu e-mail</label>
@@ -58,14 +56,15 @@
                         <input type="password" name="password" id="password" placeholder="Digite sua senha" required />
                     </div>
 
-                    <!-- Botão de login -->
+                    <!-- Token CSRF -->
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
                     <div class="login-button">
                         <button type="submit">Entrar</button>
                     </div>
                 </div>
             </form>
 
-            <!-- Link para página de cadastro -->
             <div class="register-message">
                 <p>
                     Não tem login?
@@ -75,7 +74,5 @@
         </div>
     </div>
 </body>
-
-
 
 </html>

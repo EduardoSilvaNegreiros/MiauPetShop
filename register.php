@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+// Gera token CSRF se não existir
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,49 +18,36 @@
 </head>
 
 <body>
-    <!-- Container principal -->
     <div class="container">
-
-        <!-- Imagem do logo -->
         <div class="form-image">
             <img src="assets/img/LOGOFINAL.jpg" alt="imagemPetShop" />
         </div>
 
-        <!-- Formulário de cadastro -->
         <div class="form">
             <form action="process/process_register.php" method="POST">
-
-                <!-- Cabeçalho com título e botões de navegação -->
                 <div class="form-header">
                     <div class="title">
                         <h1>Cadastre-se</h1>
                     </div>
 
-                    <!-- Botões para navegação -->
                     <div class="header-buttons">
-                        <a href="index.html"><button type="button">Sobre</button></a>
-                        <a href="login.php"><button type="button">Login</button></a>
+                        <button type="button" onclick="location.href='index.html'">Sobre</button>
+                        <button type="button" onclick="location.href='login.php'">Login</button>
                     </div>
                 </div>
 
-                <!-- Exibir mensagens de erro ou sucesso -->
                 <?php
-                session_start(); // Inicia a sessão
-
-                // Exibir mensagens de erro
                 if (isset($_SESSION['mensagem_erro'])) {
-                    echo '<div class="alert alert-danger">' . $_SESSION['mensagem_erro'] . '</div>';
-                    unset($_SESSION['mensagem_erro']); // Limpa a mensagem após exibi-la
+                    echo '<div class="alert alert-danger">' . htmlspecialchars($_SESSION['mensagem_erro']) . '</div>';
+                    unset($_SESSION['mensagem_erro']);
                 }
 
-                // Exibir mensagens de sucesso
                 if (isset($_SESSION['mensagem_sucesso'])) {
-                    echo '<div class="alert alert-success">' . $_SESSION['mensagem_sucesso'] . '</div>';
-                    unset($_SESSION['mensagem_sucesso']); // Limpa a mensagem após exibi-la
+                    echo '<div class="alert alert-success">' . htmlspecialchars($_SESSION['mensagem_sucesso']) . '</div>';
+                    unset($_SESSION['mensagem_sucesso']);
                 }
                 ?>
 
-                <!-- Grupo de inputs para cadastro -->
                 <div class="input-group">
                     <div class="input-box">
                         <label for="primeiroNome">Primeiro Nome</label>
@@ -70,7 +66,8 @@
 
                     <div class="input-box">
                         <label for="telefone">Telefone</label>
-                        <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx" required />
+                        <input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxx-xxxx"
+                            pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" required />
                     </div>
 
                     <div class="input-box">
@@ -80,20 +77,18 @@
 
                     <div class="input-box">
                         <label for="confirmarSenha">Confirme sua senha</label>
-                        <input type="password" name="confirmarSenha" id="confirmarSenha" placeholder="Digite sua senha novamente"
-                            required />
+                        <input type="password" name="confirmarSenha" id="confirmarSenha"
+                            placeholder="Digite sua senha novamente" required />
                     </div>
 
-                    <!-- Grupo de inputs para gênero -->
                     <div class="gender-inputs">
                         <div class="gender-title">
                             <h6>Gênero</h6>
                         </div>
 
-                        <!-- Opções de gênero -->
                         <div class="gender-group">
                             <div class="gender-input">
-                                <input type="radio" name="genero" id="feminino" value="Feminino" />
+                                <input type="radio" name="genero" id="feminino" value="Feminino" required />
                                 <label for="feminino">Feminino</label>
                             </div>
 
@@ -112,11 +107,13 @@
                                 <label for="naoDizer">Prefiro não dizer</label>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Botão para enviar o formulário -->
-                        <div class="continue-button">
-                            <button type="submit">Continuar</button>
-                        </div>
+                    <!-- Token CSRF escondido -->
+                    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
+                    <div class="continue-button">
+                        <button type="submit">Continuar</button>
                     </div>
                 </div>
             </form>
